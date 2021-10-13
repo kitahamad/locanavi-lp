@@ -7,12 +7,12 @@ $color-white: #fff !default; // 白
 $color-black: #000 !default; // 黒
 
 // # プライマリ
-$color-primary: #65A04D !default; // プライマリカラー
+$color-primary: #F08F36 !default; // プライマリカラー
 $color-primary-dark: darken($color-primary, 10) !default; // 濃いプライマリカラー
 $color-primary-light: lighten($color-primary, 10) !default; // 薄いプライマリカラー
 
 // # セカンダリー
-$color-secondary: #F9F7F0 !default; // セカンダリカラー
+$color-secondary: #F4F2F0 !default; // セカンダリカラー
 $color-secondary-dark: darken($color-secondary, 10) !default; // 濃いセカンダリカラー
 $color-secondary-light: lighten($color-secondary, 10) !default; // 薄いセカンダリカラー
 
@@ -22,7 +22,7 @@ $color-tertiary-light: darken($color-tertiary, 10) !default; // 薄いグレイ�
 $color-tertiary-dark: lighten($color-tertiary, 10) !default; // 濃いグレイスケールカラー
 
 // # アクセント
-$color-accent: #E04B3A !default; // ターシャリカラー
+$color-accent: #21C38A !default; // ターシャリカラー
 $color-accent-green: #65AC29 !default; // ターシャリカラー
 $color-accent-orange: #E6A54D !default; // ターシャリカラー
 $color-accent-light: darken($color-tertiary, 10) !default; // 薄いアクセントカラー
@@ -54,7 +54,7 @@ $grid-column-responsive-gutter: (// カラムとカラムの間隔
 $font-base-size: 16px !default; // body のフォントサイズ
 $font-base-line-height: 1.75 !default; // body のフォントサイズ
 $font-base-letter-spacing: 0.1em !default; // body のフォントサイズ
-$font-base-color: #333 !default; // body のフォントカラー
+$font-base-color: #000 !default; // body のフォントカラー
 $font-base-family: 'Noto Sans JP', sans-serif !default; // フォントファミリー
 $font-base-weight: normal !default; // フォント幅
 $font-base-style: normal !default; // フォントスタイル

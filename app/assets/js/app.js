@@ -28,16 +28,16 @@ import slickTheme from "slick-carousel/slick/slick-theme.css";
 
 
 class ScrollReveal {
-  constructor(options){
+  constructor(options) {
     this.options = options;
   }
 
-  reveal(el, options, duration){
+  reveal(el, options, duration) {
     $(el).css({
       visibility: "visible",
       opacity: 0,
     })
-    scrollfire( el, function(){
+    scrollfire(el, function () {
       // console.log(el);
       var args = {
         targets: el,
@@ -45,7 +45,7 @@ class ScrollReveal {
         // translateY: -options.distance,
         // duration: 600
       }
-      args = Object.assign(options,args);
+      args = Object.assign(options, args);
       anime(args);
     }, {
       offset: window.innerHeight
@@ -132,7 +132,7 @@ class App {
       });
       //->カード_カルーセル
       owls.imagesLoaded(function () {
-        if ($('.js-card-slider').find('.c-card__block').length < 3){
+        if ($('.js-card-slider').find('.c-card__block').length < 3) {
           $('.js-card-slider').toggleClass('owl-carousel');
           return false;
         }
@@ -161,6 +161,7 @@ class App {
         });
       });
     }
+
     //- スクロールリーバル
     function reveal() {
       function domEach(items, callback) {
@@ -173,6 +174,7 @@ class App {
           callback(i, item);
         }
       }
+
       window.sr = new ScrollReveal({duration: 600, mobile: true});
       var baseEasing = 'cubicBezier(0.175, 0.885, 0.32, 1.275)';
       var baseDistance = '8';
@@ -184,36 +186,35 @@ class App {
         delay: 900,
       }, 100);
 
-      sr.reveal(".c-solution__wrap  > *",{
+      sr.reveal(".c-solution__wrap  > *", {
         scale: [0.9, 1],
         opacity: 1,
         duration: 600,
         delay: anime.stagger(100),
-        translateX: [-baseDistance,0],
+        translateX: [-baseDistance, 0],
         easing: baseEasing
       });
-      domEach(".c-card-sm__block", function(key, item){
+      domEach(".c-card-sm__block", function (key, item) {
 
-        sr.reveal(item,{
+        sr.reveal(item, {
           scale: {
-            value: [0.9,1],
+            value: [0.9, 1],
             // easing: "linear"
           },
           opacity: 1,
           duration: 600,
-          delay: 100*key,
-          translateY: [-baseDistance,0],
+          delay: 100 * key,
+          translateY: [-baseDistance, 0],
           easing: baseEasing
-        } );
+        });
       });
     }
-
 
 
     // slick
     function slickSlider() {
 
-      if ($('.js-gallery-slider').length <0 ){
+      if ($('.js-gallery-slider').length < 0) {
         return false;
       }
 
@@ -276,6 +277,7 @@ class App {
         arrows: false,
         swipe: false,
         dots: false,
+        vertical: true,
         variableWidth: true,  // スライド幅の自動計算を無効
         autoplay: true,
         autoplaySpeed: 0,
@@ -288,11 +290,71 @@ class App {
       if (slickInfinite) $(slickInfinite).slick(optionInfinite);
     }
 
+    function loopSlider() {
+      var targetInner = $('.js-loop-slider'),
+        slideEasing = 'linear',
+        slideSpeed = 4000;
+
+      $.each(targetInner, function () {
+        var self = $(this);
+        var targetInnerItems = self.children();
+        for (var i = 0; i < 2; i++) {
+          targetInnerItems.clone().prependTo(self);
+          targetInnerItems.clone().appendTo(self);
+        }
+        //liの個数を取得
+        var selfChildItemLength = self.children().length;
+        //liの幅を取得
+        var selfChildList = self.children().innerHeight();
+        //ulを複製する
+        // self.clone().appendTo( targetInner );
+        //ulの親divに幅を付与する
+        // targetInner.width( ( selfChildList * selfChildItemLength ) * 2 )
+        targetInner.height(selfChildList * selfChildItemLength);
+
+        // 親divをアニメーションさせる
+        function galleryAnimate() {
+          let start = 0,
+              end = 0;
+          $.each(targetInner, function (i, el) {
+            if ($(el).hasClass('is-reverse')) {
+              start = '-' + (selfChildList * selfChildItemLength) / 3 * 2 + 'px';
+              end = 0;
+            } else {
+              $(el).css({
+                top: '-' + (selfChildList * selfChildItemLength) / 3 * 2 + 'px'
+              });
+              start = 0;
+              end = '-' + (selfChildList * selfChildItemLength) / 3 * 2 + 'px';
+            }
+            $(el).animate(
+              {
+                top: start
+              }, {
+                duration: slideSpeed * selfChildItemLength,
+                easing: slideEasing,
+                complete: function () {
+                  $(el).css({
+                    top: end
+                  });
+                  galleryAnimate()
+                }
+              }
+            );
+          });
+        }
+
+        galleryAnimate()
+      });
+    }
+
+
     $(function () {
       menuSlide();
       owlCarousel();
       reveal();
       slickSlider();
+      loopSlider();
     });
   }
 }

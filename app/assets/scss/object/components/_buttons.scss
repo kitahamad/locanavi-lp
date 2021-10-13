@@ -1,42 +1,38 @@
-/*
----
-name: ボタン_カラー別
-category: Buttons
----
-*/
 .c-button {
   outline: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: rem-calc(203);
+  max-width: rem-calc(218);
+  height: rem-calc(50);
+  font-size: rem-calc(14);
+  letter-spacing: 0.05em;
+  line-height: 17/14*1;
   text-align: center;
-  background-color: $color-primary;
+  background-color: $color-accent;
   color: $color-white;
-  border: 1px solid $color-primary;
   text-decoration: none;
-  border-radius: 4px;
-  padding: rem-calc(13) rem-calc(24);
+  border-radius: 1000px;
+  padding: 0 rem-calc(16);
   position: relative;
   transition: all .3s;
   font-weight: 700;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
   transform: perspective(1px) translateZ(0);
-  // *アイコン
-  &:after {
-    content: "\f105";
-    display: block;
-    font-family: "FontAwesome";
-    position: absolute;
-    top: 50%;
-    right: rem-calc(16);
-    transform: translateY(-50%);
-    font-weight: 400;
+
+  i {
+    font-size: rem-calc(17);
+    letter-spacing: 0;
+    line-height: 1;
+    padding-right: 0;
+    margin-right: rem-calc(6);
   }
 
   // *hover
   &:hover {
-    opacity: 1;
-    background-color: $color-white;
-    color: $color-primary;
+    opacity: 0.7;
+    box-shadow: none;
   }
 
   // カラー設定
@@ -76,30 +72,25 @@ category: Buttons
   }
 }
 
-/*
----
-name: ボタン_サイズ別
-category: Buttons
----
-*/
+
 .c-button {
   // サイズ設定
   // -> 大
   &.is-xlg {
-    max-width: rem-calc(392);
-    padding: rem-calc(26) rem-calc(32);
-    font-size: rem-calc(18);
+    max-width: rem-calc(509);
+    height: rem-calc(80);
+    padding: 0 rem-calc(32);
+    font-size: rem-calc(22);
     @include breakpoint(small only) {
       max-width: 100%;
       font-size: rem-calc(18)*0.9;
       padding: rem-calc(20) rem-calc(32);
     }
 
-    &:after {
-      font-size: rem-calc(24);
-      @include breakpoint(small only) {
-        font-size: rem-calc(24)*0.9;
-      }
+    i {
+      font-size: rem-calc(27);
+      position: relative;
+      top: 2px;
     }
   }
 

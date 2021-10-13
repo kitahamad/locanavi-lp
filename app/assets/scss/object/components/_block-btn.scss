@@ -1,0 +1,39 @@
+.c-block-btn {
+  text-align: center;
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    font-size: rem-calc(19);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 20/19*1;
+    margin-bottom: rem-calc(12);
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 22px;
+      background-image: url(../images/img-text-deco-left.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      margin-right: rem-calc(10);
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 22px;
+      background-image: url(../images/img-text-deco-right.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      margin-left: rem-calc(10);
+    }
+  }
+
+  &__button {
+  }
+}

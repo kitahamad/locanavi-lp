@@ -1,106 +1,143 @@
-/*
----
-name: メインビジュアル_通常
-category: Components
----
-*/
-
 .c-main-visual {
   width: 100%;
   position: relative;
+  padding: rem-calc(72) 0 rem-calc(68) rem-calc(68);
+  background-color: $color-primary;
+  overflow: hidden;
+  margin-top: rem-calc(94);
 
-  &__image {
+  &__wrap {
     width: 100%;
-    height: rem-calc(620);
-    top: 0;
-    left: 0;
-    @include bg-option();
-    @include breakpoint(medium down) {
-      height: 50vw;
-      min-height: 280px;
-    }
-
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba($color-black, 0.2);
-      top: 0;
-      left: 0;
+    background-color: $color-white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-top: rem-calc(36);
+    padding-bottom: rem-calc(36);
+    padding-left: rem-calc(112);
+    @media (max-width: 1140px) {
+      padding-left: rem-calc(36);
     }
   }
 
   &__inner {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: 99;
+    max-width: rem-calc(1400);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__content {
+    display: inline-block;
     text-align: center;
-    padding: 0 rem-calc(16);
-    margin-top: rem-calc(32);
-    @include breakpoint(medium down) {
-      margin-top: rem-calc(8);
-    }
+  }
+
+  &__title {
+    font-size: rem-calc(54);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
   }
 
   &__text {
-    margin-bottom: rem-calc(40);
-    @include breakpoint(small only) {
-      margin-bottom: 4vw;
+    font-size: rem-calc(28);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.5;
+
+    span {
+      display: inline-block;
+      margin-bottom: rem-calc(2);
     }
 
     img {
-      width: 100%;
-      max-width: rem-calc(1048)/2;
-      height: auto;
-      margin: 0 auto;
-      @include breakpoint(medium down) {
-        width: 90%;
-        max-width: rem-calc(420);
-      }
+      width: 274px;
+      vertical-align: bottom;
+      margin-right: rem-calc(14);
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: rem-calc(18);
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1000px;
+    background-color: $color-secondary;
+    width: rem-calc(160);
+    height: rem-calc(160);
+    font-size: rem-calc(18);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 26/18*1;
+    margin-right: rem-calc(16);
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      display: inline;
+      color: $color-primary;
     }
   }
 
   &__button {
-    .c-button {
-      max-width: rem-calc(252) !important;
-      @include breakpoint(medium down) {
-        padding: rem-calc(12) rem-calc(24);
-        max-width: rem-calc(198) !important;
-      }
+    margin-top: rem-calc(21);
+
+    .c-button.is-xlg {
+      max-width: rem-calc(432);
+      height: rem-calc(70);
     }
   }
 
-  // owl.calousel
-  .owl-dots {
-    position: absolute;
-    bottom: rem-calc(32);
-    left: 0;
-    width: 100%;
-    z-index: 99;
+
+  &__images {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    @include breakpoint(medium down) {
-      bottom: rem-calc(16);
+    position: absolute;
+    //right: 50px;
+    right: 50%;
+    top: 0;
+    transform: rotate(5deg) translateX(650px);
+    @media (max-width: 1400px) {
+      width: 686/1400*100%;
+    }
+    @media (max-width: 1140px) {
+      transform: rotate(5deg) translateX(550px);
+    }
+  }
+
+  &__slider {
+    margin-right: rem-calc(10);
+    position: relative;
+    @media (max-width: 1400px) {
+      width: calc(50% - 5px);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__image {
+    width: rem-calc(338);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: rem-calc(10);
+    border-radius: 10px;
+    @media (max-width: 1400px) {
+      width: 100%;
     }
 
-    .owl-dot {
-      margin: 0 rem-calc(6);
-      width: rem-calc(12);
-      height: rem-calc(12);
-      background-color: $color-white;
-      border-radius: 1000px;
-      display: block;
-      outline: none;
 
-      &.active {
-        background-color: $color-primary !important;
-      }
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 230/338*100%;
     }
   }
 }

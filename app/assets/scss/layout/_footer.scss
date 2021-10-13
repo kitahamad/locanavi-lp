@@ -1,137 +1,82 @@
-/*
----
-name: フッター_サイトマップ型
-category: Layout
----
-*/
-
 .l-footer {
-  background-color: $font-base-color;
-  color: $color-white;
-  &__menu {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-top: rem-calc(80);
-    padding-bottom: rem-calc(56);
-    @include breakpoint(medium down) {
-      display: block;
-      width: calc(100% + 32px);
-      margin-left: rem-calc(-16);
-      padding-top: rem-calc(0);
-      padding-bottom: rem-calc(0);
-    }
-  }
-  &__block {
-    padding-right: rem-calc(40);
-    @media (max-width: 900px) {
-      padding-right: rem-calc(24);
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-    @include breakpoint(medium down) {
-      padding: 0;
-    }
-  }
-  &__menutitle {
-    margin-bottom: rem-calc(10);
-    font-weight: 400;
-    font-size: rem-calc(14);
-    @include breakpoint(medium down) {
-      border-bottom: 1px solid $border-base-color;
-      padding: rem-calc(12) rem-calc(24);
-      margin: 0;
-      background-color: $font-base-color;
-      &:before {
-        content: "\f107";
-        font-family: "FontAwesome";
-        color: $color-primary;
-        padding-right: rem-calc(12);
-      }
-      &.is-open {
-        &:before {
-          content: "\f106";
-        }
-      }
-    }
-  }
-  &__menulist {
-    li {
-      margin-bottom: rem-calc(20);
-      @include breakpoint(medium down) {
-        margin: 0!important;
-        border-bottom: 1px solid $border-base-color;
-      }
-      a {
-        color: $color-white;
-        text-decoration: none;
-        font-weight: 400;
-        font-size: rem-calc(14);
-        @include breakpoint(medium down) {
-          padding: rem-calc(14) rem-calc(24);
-          display: block;
-          background-color: $font-base-color;
-          &:hover {
-            opacity: 1;
-          }
-        }
-      }
-    }
-    &.is-sub {
-      @include breakpoint(medium down) {
-        display: none;
-      }
-      li {
-        margin-bottom: rem-calc(8);
-        @include breakpoint(medium down) {
-          border: none;
-        }
-        a {
-          font-weight: 400;
-          color: rgba($color-white,0.7);
-          @include breakpoint(medium down) {
-            background-color: rgba($font-base-color,0.8);
-            padding: rem-calc(10) rem-calc(44);
-          }
-        }
-      }
-    }
-  }
+  background-color: $color-white;
+  color: $font-base-color;
   &__content {
-    border-top: 1px solid rgba($border-base-color,0.2);
-    padding: rem-calc(40) 0;
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60);
+    position: relative;
+    @include breakpoint(medium down) {
+    }
+  }
+
+  &__inner {
     display: flex;
     align-items: center;
-    @include breakpoint(medium down) {
-      display: block;
-      padding: rem-calc(24) 0;
-    }
   }
+
+  &__title {
+    padding-right: rem-calc(35);
+    margin-right: rem-calc(45);
+    border-right: 1px solid #2B2B2B;
+  }
+
   &__logo {
     display: block;
     width: 100%;
-    max-width: rem-calc(175);
+    max-width: 220px;
   }
-  &__address {
-    font-style: normal;
-    font-size: rem-calc(13);
-    letter-spacing: 0.1em;
-    margin-left: rem-calc(24);
-    @include breakpoint(medium down) {
-      margin: rem-calc(24) 0;
+
+  &__company {
+    display: flex;
+    align-items: center;
+    margin-top: rem-calc(20);
+
+    span {
+      display: inline-block;
       font-size: rem-calc(12);
+      letter-spacing: 0.05em;
+      line-height: 18/12*1;
+      margin-right: rem-calc(8);
+    }
+
+    a {
+      color: $font-base-color;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: rem-calc(12);
+      letter-spacing: 0.05em;
+      line-height: 18/12*1;
     }
   }
+
+  &__sns {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      li {
+        width: 44px;
+        margin-right: rem-calc(25);
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
   &__copyright {
-    opacity: 0.5;
-    margin-left: auto;
-    margin-top: rem-calc(12);
-    display: block;
-    font-size: rem-calc(12);
-    @include breakpoint(medium down) {
-      margin-top: 0;
-      text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem-calc(48);
+    background-color: $color-primary;
+
+    small {
+      color: $color-white;
+      font-size: rem-calc(12);
+      letter-spacing: 0.09em;
+      line-height: 18/12*1;
     }
   }
 }

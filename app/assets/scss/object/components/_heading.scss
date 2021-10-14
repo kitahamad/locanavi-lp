@@ -10,30 +10,41 @@
 }
 
 .c-heading.is-xlg {
-  color: $color-primary;
-  margin-bottom: rem-calc(24);
+  text-align: center;
+  margin-bottom: rem-calc(40);
+  font-size: rem-calc(38);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 42/38*1;
   @include breakpoint(small only) {
 
   }
 
-  span {
-    display: block;
-    @include webfont-bold();
-    font-size: rem-calc(42);
-    letter-spacing: 0.1em;
-    @include breakpoint(small only) {
-      font-size: rem-calc(42)*0.8;
+  small {
+    display: inline-block;
+    font-size: rem-calc(24);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 42/24*1;
+    position: relative;
+    margin-bottom: rem-calc(10);
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-image: url(../images/img-heading-xlg-deco.png);
+      background-repeat: repeat-x;
+      background-position: left center;
+      background-size: 161px 3px;
     }
   }
 
-  small {
-    display: block;
-    font-weight: 700;
-    font-size: rem-calc(16);
-    letter-spacing: 0.1em;
-    @include breakpoint(small only) {
-      font-size: rem-calc(16)*0.8;
-    }
+  img {
+    width: 232px;
+    vertical-align: bottom;
+    margin-right: rem-calc(10);
   }
 }
 

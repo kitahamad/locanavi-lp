@@ -1,15 +1,3 @@
-/*
----
-name: ページヘッダー_通常
-category: Layout
----
-*/
-/*
----
-name: ページヘッダー_単色
-category: Layout
----
-*/
 .l-page-header {
   width: 100%;
   position: relative;
@@ -61,17 +49,5 @@ category: Layout
   &__subtitle {
     font-weight: 700;
     letter-spacing: 0.1em;
-  }
-
-  // 画像なし単色
-  &.is-image-hidden {
-    height: rem-calc(200);
-    background-color: $color-secondary;
-    &:after {
-      display: none;
-    }
-    .l-page-header__inner {
-      color: $color-primary;
-    }
   }
 }

@@ -1,0 +1,140 @@
+.c-block-number-box {
+  &__container {
+    max-width: rem-calc(1200);
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 1264px) {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+    @include breakpoint(small only) {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: rem-calc(108);
+  }
+
+  &__boxes {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  &__box {
+    width: calc(50% - 15px);
+    background-color: $color-secondary;
+    border-radius: 20px;
+    padding: rem-calc(80) rem-calc(59) rem-calc(50);
+    margin-right: rem-calc(30);
+    position: relative;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__num {
+    @include webfont-bold;
+    font-size: rem-calc(125);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    color: $color-primary;
+    position: absolute;
+    left: -20px;
+    top: -64px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: rem-calc(24);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 36/24*1;
+    margin-bottom: rem-calc(58);
+  }
+
+  &__images {
+    width: 100%;
+    max-width: rem-calc(402);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: rem-calc(36);
+  }
+
+  &__image {
+    width: calc(50% - 14px);
+  }
+
+  &__label {
+    width: rem-calc(108);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+  }
+
+  &__text {
+    font-size: rem-calc(14);
+    letter-spacing: 0;
+    line-height: 26/14*1;
+  }
+
+  &__inbox {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-top: rem-calc(24);
+    background-color: $color-white;
+    padding: rem-calc(25) rem-calc(40) rem-calc(25) rem-calc(22);
+    font-size: rem-calc(14);
+    letter-spacing: 0;
+    line-height: 26/14*1;
+
+    &-title {
+      font-weight: 700;
+      margin-bottom: rem-calc(8);
+    }
+
+    &-list {
+      li {
+        padding-left: rem-calc(14);
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 8px;
+          background-color: $color-primary;
+          border-radius: 1000px;
+          position: absolute;
+          left: 0;
+          top: 9px;
+        }
+
+        small {
+          font-size: rem-calc(12);
+        }
+      }
+    }
+
+    &-text {
+      margin-top: rem-calc(8);
+    }
+  }
+
+  &__sup {
+    display: inline-block;
+    color: $color-primary;
+    font-size: rem-calc(11);
+    letter-spacing: 0;
+    line-height: 23/11*1;
+    margin-top: rem-calc(26);
+  }
+}

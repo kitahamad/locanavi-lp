@@ -92,7 +92,7 @@ block body
             div.u-mbs.is-top.is-xxlg
               +c_block-btn
 
-    section.l-section.is-xxxlg
+    section.l-section.is-xxxlg#about
       +c.block-number-box
         +e.container
           +e.heading
@@ -146,7 +146,7 @@ block body
           +c_block-btn
 
 
-    section.l-section.is-xxxlg.is-bottom.is-color-secondary
+    section.l-section.is-xxxlg.is-bottom.is-color-secondary#example
       +c.page-header
         +e.image: +bgimg("img-page-header-example.jpg").c-page-header__bgimg
         +e.inner
@@ -214,6 +214,52 @@ block body
             +img("img-example-title.svg","実際の具体例")
             h3 こんなに、<span>安心！</span>
             p 抜群の受け入れ体制
+
+          +c.card-acceptance
+            +e.cards
+              a(href="").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-01.jpg").is-bgimg
+                +e.content
+                  +e.title PARCO（パルコ）
+                  +e.text
+                    p ①パルコグループで要望に合う店舗を紹介　
+                    p ②館内全体の貸し切り実績あり
+              a(href="").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-02.jpg").is-bgimg
+                +e.content
+                  +e.title 赤坂インターシティコンファレンス
+                  +e.text
+                    p ①24時間撮影可能
+                    p ②会議室が複数あり、警察や病院の会議室設定などにも応用できる
+              a(href="").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-03.jpg").is-bgimg
+                +e.content
+                  +e.title セルリアンタワー東急ホテル
+                  +e.text
+                    p ①フロア貸し切り可能
+                    p ②高級マンションや社長室としても撮影実績あり
+              a(href="").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-04.jpg").is-bgimg
+                +e.content
+                  +e.title ホテルスプリングス幕張
+                  +e.text
+                    p ①ホテル新館一棟丸々貸し切り可能
+                    p ②豪華客船としても撮影実績あり
+              a(href="").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-05.jpg").is-bgimg
+                +e.content
+                  +e.title PDP（飲食店）
+                  +e.text
+                    p ①グループ紹介あり！<br>ご要望に合った施設で撮影できる
+                    p ②貸し切りの相談も可能
+              a(href="").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-06.jpg").is-bgimg
+                +e.content
+                  +e.title 亀戸1001マンションスタジオ
+                  +e.text
+                    p ①長時間割引などの調整可能！
+                    p ②家具や食器類など貸出サービス
+
           +c.block-comment
             +e.block
               +e.images
@@ -231,6 +277,28 @@ block body
             +img("img-example-title.svg","実際の具体例")
             h3 ここまで、<span>無料！？</span>
             p 旅・情報番組ネタのリサーチ
+
+          +c.block-normal
+            +e.blocks
+              +e.block
+                +e.image: +img("img-free-01.jpg","『有吉くんの正直さんぽ（長崎県島原市）")
+                +e.content
+                  +e.title 『有吉くんの正直さんぽ（長崎県島原市）
+                  +e("ul").list.c-list.is-icon
+                    li 10スポット（飲食店、城、電車等）全て貸し切りでの撮影を可能に！
+                    li 市長含め、コロナ下でもロケ歓迎ムード！
+                    li 全ての段取りや調整を窓口が実施
+                    li 飲食店への事前の根回しを徹底
+                    li 撮影のお断り連絡もすべてサポート
+              +e.block
+                +e.image: +img("img-free-02.jpg","『世界の果てまでイッテQ』（大分県別府市／杉乃井ホテル）")
+                +e.content
+                  +e.title 『世界の果てまでイッテQ』<br>（大分県別府市／杉乃井ホテル）
+                  +e("ul").list.c-list.is-icon
+                    li コロナ下でも、積極的に場所貸しに対応！
+                    li グループホテルへの事前の根回しを徹底
+                    li 撮影料、宿泊費など、ディスカウント相談にも対応。
+
           +c.block-comment
             +e.block
               +e.images
@@ -241,3 +309,170 @@ block body
                   コロナ禍でロケがしづらい中、ロケを受け入れてくれ感謝です。<br>
                   市長があそこまで対応してくれるのは、正直さんぽ<span>史上最高だった！</span>
                 +e.name 〇〇さん
+
+
+    section.l-section.is-lg
+      +c.loop-slider
+        +e.slider.js-infinite-slider
+          +e.image: +bgimg("img-loop-slider-01.jpg").is-bgimg
+          +e.image: +bgimg("img-loop-slider-02.jpg").is-bgimg
+          +e.image: +bgimg("img-loop-slider-03.jpg").is-bgimg
+          +e.image: +bgimg("img-loop-slider-04.jpg").is-bgimg
+
+
+    section.l-section.is-xxxlg.is-color-primary.is-bg-image.is-margin-bottom#news
+      .l-container
+        +c.block-notice
+          +e.heading
+            small いよいよ2/15より！
+            h2 ロケなび！<span>プレミアムサービス</span>開始予定！
+          +e.box
+            +e("ul").list
+              li 掲載施設の値引き情報
+              li 交通費・宿泊費無料のロケハンツアー
+              li 掲載施設の値引き情報
+          +e.texts
+            +e.text.
+              などを<span>優先的に</span>ご案内いたします！<br>
+              (3/15より会員登録スタート)
+            +e.text.
+              ※2/15より<span>サイトリニューアル！</span>更に情報が探しやすく生まれ変わります！
+          +e.button
+            a(href="").c-button.is-xlg <i class="fa fa-envelope" aria-hidden="true"></i>メルマガで最新ニュースを受け取る
+
+
+    section.l-section.is-xxxlg.is-color-secondary#contact
+      .l-container
+        +c.block-contact
+          +e.heading
+            h2 ロケや撮影に関するご相談はこちら
+          +e.button
+            a(href="tel:03-5157-0567").c-block-contact__tel.c-button
+              p ロケなび！コンシェルジュ
+                small （(株)地域活性プランニング内）
+              strong <i class="fa fa-phone" aria-hidden="true"></i>03-5157-0567
+              span 受付時間 9:00〜18:30 (土日祝除く)
+          +e.text.c-lead.
+            お悩みごと、不安なこと、お気軽にお問い合わせください。<br>
+            専門スタッフがニーズに沿ったマッチングやサポートをさせていただきます。<br>
+            下記のフォームに必要項目を入力して送信してください。
+
+        +c("form").forms
+          +e.block
+            +e.title
+              | 会社名
+            +e.content
+              +e.input: input(type="text",name="会社名",placeholder="株式会社カンパニー")
+
+          +e.block
+            +e.title
+              | お名前
+              span.c-forms__label 必須
+            +e.content
+              +e.input: input(type="text",name="お名前",placeholder="山田　太郎")
+
+          +e.block
+            +e.title
+              | TEL
+              span.c-forms__label 必須
+            +e.content
+              +e.input: input(type="text",name="TEL",placeholder="123-456-789")
+
+          +e.block
+            +e.title
+              | メールアドレス
+              span.c-forms__label 必須
+            +e.content
+              +e.input: input(type="text",name="メールアドレス",placeholder="info@mail.com")
+
+          +e.block
+            +e.title
+              | ご連絡方法
+              span.c-forms__label 必須
+            +e.content
+              +e.radio
+                span
+                  label
+                    input(type="radio",name="ご連絡方法",value="電話")
+                    span 電話
+                span
+                  label
+                    input(type="radio",name="ご連絡方法",value="メール")
+                    span メール
+                span
+                  label
+                    input(type="radio",name="ご連絡方法",value="いずれでも可")
+                    span いずれでも可
+
+          +e.block
+            +e.title.is-vertical-top
+              | お問い合わせ種別<br>
+              | （複数選択可）
+              span.c-forms__label 必須
+            +e.content
+              +e.checkbox
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="撮影支援について")
+                    span 撮影支援について
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="ロケーションについて")
+                    span ロケーションについて
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="ロケ弁・打上会場について")
+                    span ロケ弁・打上会場について
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="撮影ネタ・タレントについて")
+                    span 撮影ネタ・タレントについて
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="その他お問い合わせ")
+                    span その他お問い合わせ
+
+          +e.block
+            +e.title.is-vertical-top お問い合わせ内容
+              span.c-forms__label 必須
+            +e.content
+              +e.textarea
+                textarea(name="お問い合わせ内容",placeholder="")
+
+          +e.block
+            +e.title
+              | ファイルを添付する
+            +e.content
+              +e.input: input(type="file",name="添付ファイル")
+
+          +e.block
+            +e.title.is-vertical-top
+              | 最新ニュースを受け取る<br>
+              | （メルマガ）
+              span.c-forms__label 必須
+            +e.content
+              +e.radio
+                span
+                  label
+                    input(type="radio",name="メルマガ",value="登録する")
+                    span 登録する
+                span
+                  label
+                    input(type="radio",name="メルマガ",value="登録しない")
+                    span 登録しない
+
+          +e.privacy
+            label
+              input(type="checkbox",name="「個人情報保護の取り扱いに関するご確認」を確認する",value="確認しました")
+              a(href="")(target="_blank") 個人情報保護方針
+              | の内容に同意する
+
+          +e.submit
+            button.c-button.is-xlg 確認画面へ<i class="fa fa-angle-right" aria-hidden="true"></i>
+
+          +e.submit.is-two-columns
+            .row
+              .large-3.is-push-lg-3.small-6
+                button.c-button.is-lg.is-secondary.is-arrow-left <i class="fa fa-angle-left" aria-hidden="true"></i>戻る
+              .large-3.small-6
+                button.c-button.is-lg 送信する<i class="fa fa-angle-right" aria-hidden="true"></i>

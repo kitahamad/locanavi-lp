@@ -9,6 +9,10 @@
     line-height: 20/19*1;
     margin-bottom: rem-calc(12);
     position: relative;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(10);
+      margin-bottom: rem-calc(6);
+    }
 
     &:before {
       content: "";
@@ -20,6 +24,11 @@
       background-position: center center;
       background-size: contain;
       margin-right: rem-calc(10);
+      @include breakpoint(medium down) {
+        width: rem-calc(9);
+        height: rem-calc(10);
+        margin-right: rem-calc(5);
+      }
     }
     &:after {
       content: "";
@@ -31,6 +40,11 @@
       background-position: center center;
       background-size: contain;
       margin-left: rem-calc(10);
+      @include breakpoint(medium down) {
+        width: rem-calc(9);
+        height: rem-calc(10);
+        margin-left: rem-calc(5);
+      }
     }
   }
 

@@ -1,0 +1,82 @@
+.c-block-contact {
+  margin-bottom: rem-calc(56);
+
+  &__heading {
+    text-align: center;
+    margin-bottom: rem-calc(30);
+
+    h2 {
+      margin-top: 0;
+      font-size: rem-calc(36);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 52/36*1;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    margin-bottom: rem-calc(50);
+  }
+
+  &__tel {
+    &.c-button {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      max-width: rem-calc(529);
+      border-radius: 1000px;
+      background-color: $color-accent;
+      padding-top: rem-calc(17);
+      padding-bottom: rem-calc(17);
+      pointer-events: none;
+      @include breakpoint(small only) {
+        pointer-events: visible;
+      }
+    }
+
+    p {
+      font-size: rem-calc(18);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 1;
+
+      small {
+        display: block;
+        font-size: rem-calc(10);
+        line-height: 17/10*1;
+        margin-top: rem-calc(3);
+      }
+    }
+
+    strong {
+      font-size: rem-calc(38);
+      font-weight: 700;letter-spacing: 0.05em;
+      line-height: 56/38*1;
+
+      i {
+        font-size: rem-calc(46);
+        letter-spacing: 0;
+        line-height: 1;
+        margin-right: rem-calc(12);
+        position: relative;
+        top: 4px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      font-size: rem-calc(14);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 20/14*1;
+      margin-top: rem-calc(4);
+    }
+  }
+
+  &__text {
+    font-size: rem-calc(14);
+    letter-spacing: 0;
+    line-height: 26/14*1;
+  }
+}

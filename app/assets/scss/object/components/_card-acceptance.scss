@@ -1,0 +1,93 @@
+.c-card-acceptance {
+  &__cards {
+    text-align: center;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    color: $font-base-color;
+    display: inline-block;
+    text-decoration: none;
+    width: 330/1073*100%;
+    margin-right: 25/1073*100%;
+    box-shadow: 0 2px 6px rgba($color-black, 0.16);
+    background-color: $color-white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n + 4) {
+      margin-top: rem-calc(40);
+    }
+
+    &:hover {
+      opacity: 1;
+      .is-bgimg {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    overflow: hidden;
+    .is-bgimg {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      @include transition;
+      backface-visibility: hidden;
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 181/330*100%;
+      }
+    }
+  }
+
+  &__content {
+    padding: rem-calc(26) rem-calc(24) rem-calc(30);
+  }
+
+  &__title {
+    color: $color-primary;
+    text-align: center;
+    font-size: rem-calc(16);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 25/16*1;
+    margin-bottom: rem-calc(22);
+
+    &:after {
+      content: "\f105";
+      display: inline-block;
+      font-family: "FontAwesome";
+      font-size: rem-calc(18);
+      letter-spacing: 0;
+      line-height: 1;
+      margin-left: rem-calc(4);
+    }
+  }
+
+  &__text {
+    text-align: left;
+    font-size: rem-calc(17);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 27/17*1;
+
+    p {
+      text-indent: -17px;
+      padding-left: 17px;
+    }
+  }
+}

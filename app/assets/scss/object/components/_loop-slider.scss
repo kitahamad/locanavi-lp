@@ -1,0 +1,19 @@
+.c-loop-slider {
+  &__image {
+    width: 480/1400*100%;
+    max-width: rem-calc(480);
+    margin-right: 30px;
+
+    .is-bgimg {
+      border-radius: 10px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 290/480*100%;
+      }
+    }
+  }
+}

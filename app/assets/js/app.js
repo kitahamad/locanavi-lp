@@ -273,11 +273,11 @@ class App {
     // ループスライダー
     function infiniteSlider() {
       const optionInfinite = {
+        margin: 30,
         infinite: true,
         arrows: false,
         swipe: false,
         dots: false,
-        vertical: true,
         variableWidth: true,  // スライド幅の自動計算を無効
         autoplay: true,
         autoplaySpeed: 0,
@@ -354,6 +354,7 @@ class App {
       owlCarousel();
       reveal();
       slickSlider();
+      infiniteSlider();
       loopSlider();
     });
   }

@@ -5,6 +5,10 @@
   background-color: $color-primary;
   overflow: hidden;
   margin-top: rem-calc(94);
+  @include breakpoint(medium down) {
+    margin-top: rem-calc(70);
+    padding: rem-calc(52) 0;
+  }
 
   &__wrap {
     width: 100%;
@@ -17,17 +21,30 @@
     @media (max-width: 1140px) {
       padding-left: rem-calc(36);
     }
+    @include breakpoint(medium down) {
+      border-radius: 0;
+      padding-top: rem-calc(60);
+      padding-bottom: rem-calc(52);
+      padding-left: rem-calc(14);
+    }
   }
 
   &__inner {
     max-width: rem-calc(1400);
     margin-left: auto;
     margin-right: auto;
+    @include breakpoint(medium down) {
+      max-width: rem-calc(750);
+    }
   }
 
   &__content {
     display: inline-block;
     text-align: center;
+    @include breakpoint(small only) {
+      position: relative;
+      z-index: 1;
+    }
   }
 
   &__title {
@@ -35,6 +52,9 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     line-height: 1.4;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(28);
+    }
   }
 
   &__text {
@@ -42,6 +62,9 @@
     font-weight: 700;
     letter-spacing: 0;
     line-height: 1.5;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(14);
+    }
 
     span {
       display: inline-block;
@@ -52,6 +75,9 @@
       width: 274px;
       vertical-align: bottom;
       margin-right: rem-calc(14);
+      @include breakpoint(medium down) {
+        width: 173px;
+      }
     }
   }
 
@@ -76,6 +102,12 @@
     letter-spacing: 0.05em;
     line-height: 26/18*1;
     margin-right: rem-calc(16);
+    @include breakpoint(medium down) {
+      width: rem-calc(78);
+      height: rem-calc(78);
+      margin-right: rem-calc(3);
+      font-size: rem-calc(10);
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -88,10 +120,27 @@
 
   &__button {
     margin-top: rem-calc(21);
+    @include breakpoint(medium down) {
+      margin-top: rem-calc(24);
+      text-align: left;
+      .c-block-btn {
+        text-align: left;
+      }
+    }
 
     .c-button.is-xlg {
       max-width: rem-calc(432);
       height: rem-calc(70);
+      @include breakpoint(medium down) {
+        max-width: rem-calc(196);
+        height: rem-calc(38);
+        font-size: rem-calc(11);
+
+        i {
+          font-size: rem-calc(15);
+          margin-right: rem-calc(4);
+        }
+      }
     }
   }
 
@@ -109,6 +158,10 @@
     @media (max-width: 1140px) {
       transform: rotate(5deg) translateX(550px);
     }
+    @include breakpoint(medium down) {
+      width: auto;
+      transform: rotate(9deg) translateX(365px);
+    }
   }
 
   &__slider {
@@ -116,6 +169,9 @@
     position: relative;
     @media (max-width: 1400px) {
       width: calc(50% - 5px);
+    }
+    @include breakpoint(medium down) {
+      width: auto;
     }
     &:last-child {
       margin-right: 0;
@@ -131,6 +187,10 @@
     border-radius: 10px;
     @media (max-width: 1400px) {
       width: 100%;
+    }
+    @include breakpoint(medium down) {
+      width: rem-calc(200);
+      margin-bottom: rem-calc(6);
     }
 
 

@@ -29,6 +29,8 @@ body {
   line-height: $font-base-line-height;
   letter-spacing: $font-base-letter-spacing;
   font-size: $font-base-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   &.is-slidebar-active {
     overflow: hidden;
   }

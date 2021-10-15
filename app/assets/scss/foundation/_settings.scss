@@ -25,8 +25,8 @@ $color-tertiary-dark: lighten($color-tertiary, 10) !default; // 濃いグレイ�
 $color-accent: #21C38A !default; // ターシャリカラー
 $color-accent-green: #65AC29 !default; // ターシャリカラー
 $color-accent-orange: #E6A54D !default; // ターシャリカラー
-$color-accent-light: darken($color-tertiary, 10) !default; // 薄いアクセントカラー
-$color-accent-dark: lighten($color-tertiary, 10) !default; // 濃いアクセントカラー
+$color-accent-light: lighten($color-accent, 10) !default; // 薄いアクセントカラー
+$color-accent-dark: darken($color-accent, 10) !default; // 濃いアクセントカラー
 
 // # 灰色
 $color-gray-dark: #252525 !default; // 濃い灰色

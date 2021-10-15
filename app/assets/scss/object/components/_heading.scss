@@ -46,6 +46,10 @@
     vertical-align: bottom;
     margin-right: rem-calc(10);
   }
+
+  span {
+    color: $color-primary;
+  }
 }
 
 .c-heading.is-lg {

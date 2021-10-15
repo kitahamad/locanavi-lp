@@ -7,10 +7,12 @@
   position: fixed;
   top: 0;
   left: 0;
+  @media (max-width: 1100px) {
+    padding: 0 rem-calc(24) 0 rem-calc(24);
+  }
   @include breakpoint(medium down) {
     width: 100%;
-    padding: rem-calc(3) rem-calc(64) rem-calc(3) rem-calc(16);
-    height: rem-calc(55);
+    padding: 0 rem-calc(90) 0 rem-calc(20);
   }
 
   &__heading {
@@ -20,7 +22,8 @@
     position: relative;
     top: -5px;
     @include breakpoint(medium down) {
-      width: rem-calc(148);
+      width: 122px;
+      top: 0;
     }
 
     a,
@@ -33,6 +36,9 @@
     display: flex;
     align-items: center;
     height: rem-calc(94);
+    @include breakpoint(medium down) {
+      height: rem-calc(70);
+    }
   }
 
   &__nav {
@@ -48,6 +54,12 @@
 
       li {
         margin-right: 60px;
+        @media (max-width: 1200px) {
+          margin-right: rem-calc(32);
+        }
+        @media (max-width: 1100px) {
+          margin-right: rem-calc(24);
+        }
         &:last-of-type {
           margin-right: 0;
         }
@@ -66,7 +78,7 @@
           font-size: rem-calc(15);
           letter-spacing: 0.05em;
           position: relative;
-          padding-bottom: rem-calc(36);
+          padding-bottom: rem-calc(37);
           transition: all .3s ease;
           //装飾
           &:after {
@@ -100,6 +112,12 @@
 
   &__button {
     margin-left: rem-calc(50);
+    @media (max-width: 1100px) {
+      margin-left: rem-calc(24);
+      &.c-button {
+        max-width: rem-calc(180);
+      }
+    }
     @include breakpoint(medium down) {
       display: none;
     }

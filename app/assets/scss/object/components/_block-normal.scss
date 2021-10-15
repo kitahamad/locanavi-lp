@@ -1,0 +1,40 @@
+.c-block-normal {
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: rem-calc(80);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    width: rem-calc(351);
+    margin-right: rem-calc(50);
+    flex: none;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__title {
+    font-size: rem-calc(24);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 36/24*1;
+    margin-bottom: rem-calc(26);
+  }
+
+  &__list {
+    li {
+      font-size: rem-calc(18);
+      letter-spacing: 0.05em;
+      line-height: 37/18*1;
+      &:before {
+        top: 5px;
+      }
+    }
+  }
+}

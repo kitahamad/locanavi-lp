@@ -13,6 +13,7 @@
   background-color: $color-accent;
   color: $color-white;
   text-decoration: none;
+  border: none;
   border-radius: 1000px;
   padding: 0 rem-calc(16);
   position: relative;
@@ -31,7 +32,7 @@
 
   // *hover
   &:hover {
-    opacity: 0.7;
+    background-color: $color-accent-light;
     box-shadow: 0 6px 6px rgba(0,0,0,0.16);
   }
 
@@ -52,6 +53,16 @@
       opacity: 1;
       background-color: $color-primary;
       color: $color-white;
+    }
+  }
+
+  // -> セカンダリカラー
+  &.is-secondary {
+    background-color: $color-secondary-dark;
+    color: $font-base-color;
+
+    &:hover {
+      background-color: $color-secondary-light;
     }
   }
 
@@ -140,15 +151,3 @@
   }
 }
 
-
-.c-button {
-  // デザイン設定
-  // ->矢印左
-  &.is-arrow-left {
-    &:after {
-      content: "\f104";
-      right: auto;
-      left: rem-calc(10);
-    }
-  }
-}

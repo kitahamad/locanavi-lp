@@ -108,6 +108,12 @@
       margin-right: rem-calc(3);
       font-size: rem-calc(10);
     }
+    @include breakpoint(small only) {
+      p {
+        transform: scale(0.9);
+      }
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -125,6 +131,23 @@
       text-align: left;
       .c-block-btn {
         text-align: left;
+        padding: 0;
+      }
+      .c-block-btn__text {
+        font-size: rem-calc(10);
+        margin-bottom: rem-calc(6);
+
+        &:before {
+          width: rem-calc(9);
+          height: rem-calc(10);
+          margin-right: rem-calc(5);
+        }
+
+        &:after {
+          width: rem-calc(9);
+          height: rem-calc(10);
+          margin-left: rem-calc(5);
+        }
       }
     }
 
@@ -160,6 +183,9 @@
     }
     @include breakpoint(medium down) {
       width: auto;
+      transform: rotate(9deg) translateX(235px);
+    }
+    @include breakpoint(small only) {
       transform: rotate(9deg) translateX(365px);
     }
   }
@@ -173,6 +199,7 @@
     @include breakpoint(medium down) {
       width: auto;
     }
+
     &:last-child {
       margin-right: 0;
     }

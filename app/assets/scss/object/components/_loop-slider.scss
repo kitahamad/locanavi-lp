@@ -3,6 +3,10 @@
     width: 480/1400*100%;
     max-width: rem-calc(480);
     margin-right: 30px;
+    @include breakpoint(small only) {
+      max-width: rem-calc(240);
+      margin-right: rem-calc(16);
+    }
 
     .is-bgimg {
       border-radius: 10px;

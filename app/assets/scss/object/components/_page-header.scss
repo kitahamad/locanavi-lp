@@ -4,6 +4,9 @@
   overflow: hidden;
   z-index: 1;
   margin-bottom: rem-calc(80);
+  @include breakpoint(small only) {
+    margin-bottom: rem-calc(40);
+  }
 
   &__image {
     position: absolute;
@@ -30,6 +33,7 @@
     padding: 0 rem-calc(16);
     @include breakpoint(small only) {
       padding: 0 rem-calc(16);
+      height: rem-calc(160);
     }
   }
 

@@ -9,6 +9,12 @@
     width: 100%;
     max-width: rem-calc(388);
     margin-right: rem-calc(36);
+    @include breakpoint(medium down) {
+      width: 324px;
+      flex: none;
+      margin-right: 0;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -22,6 +28,14 @@
     line-height: 39/25*1;
     position: relative;
     margin-bottom: rem-calc(17);
+    @include breakpoint(medium down) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      font-size: rem-calc(16);
+      margin-bottom: rem-calc(10);
+    }
 
     &:before {
       content: "";
@@ -35,6 +49,14 @@
       margin-left: auto;
       margin-right: auto;
       margin-bottom: rem-calc(10);
+      @include breakpoint(medium down) {
+        flex: none;
+        width: 40px;
+        height: 38px;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: rem-calc(10);
+      }
     }
 
     span {
@@ -51,7 +73,12 @@
     border-radius: 26px;
     padding: rem-calc(50) rem-calc(24) rem-calc(44);
     margin-bottom: rem-calc(10);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    @include breakpoint(medium down) {
+      border-radius: 20px;
+      padding: rem-calc(16) rem-calc(24);
+      margin-bottom: 0;
+    }
   }
 
   &__list {
@@ -64,6 +91,10 @@
       margin-bottom: rem-calc(10);
       position: relative;
       padding-left: rem-calc(25);
+      @include breakpoint(medium down) {
+        font-size: rem-calc(12);
+        margin-bottom: rem-calc(6);
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -87,9 +118,13 @@
 
   &__image {
     text-align: center;
+
     img {
       width: 100%;
       max-width: 171px;
+      @include breakpoint(medium down) {
+        max-width: 100px;
+      }
     }
   }
 
@@ -100,6 +135,14 @@
 
     .c-button {
       max-width: rem-calc(305);
+      @include breakpoint(medium down) {
+        font-size: rem-calc(14);
+        height: rem-calc(44);
+
+        &:after {
+          font-size: rem-calc(14);
+        }
+      }
     }
   }
 }

@@ -1,5 +1,8 @@
 .c-block-contact {
   margin-bottom: rem-calc(56);
+  @include breakpoint(small only) {
+    margin-bottom: rem-calc(40);
+  }
 
   &__heading {
     text-align: center;
@@ -11,12 +14,18 @@
       font-weight: 700;
       letter-spacing: 0.05em;
       line-height: 52/36*1;
+      @include breakpoint(small only) {
+        font-size: rem-calc(24);
+      }
     }
   }
 
   &__button {
     text-align: center;
     margin-bottom: rem-calc(50);
+    @include breakpoint(small only) {
+      margin-bottom: rem-calc(32);
+    }
   }
 
   &__tel {
@@ -32,6 +41,8 @@
       pointer-events: none;
       @include breakpoint(small only) {
         pointer-events: visible;
+        padding-top: rem-calc(12);
+        padding-bottom: rem-calc(12);
       }
     }
 
@@ -40,6 +51,9 @@
       font-weight: 700;
       letter-spacing: 0.05em;
       line-height: 1;
+      @include breakpoint(small only) {
+        font-size: rem-calc(16);
+      }
 
       small {
         display: block;
@@ -51,8 +65,12 @@
 
     strong {
       font-size: rem-calc(38);
-      font-weight: 700;letter-spacing: 0.05em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
       line-height: 56/38*1;
+      @include breakpoint(small only) {
+        font-size: rem-calc(24);
+      }
 
       i {
         font-size: rem-calc(46);
@@ -61,6 +79,10 @@
         margin-right: rem-calc(12);
         position: relative;
         top: 4px;
+        @include breakpoint(small only) {
+          font-size: rem-calc(22);
+          top: 2px;
+        }
       }
     }
 
@@ -71,6 +93,9 @@
       letter-spacing: 0.05em;
       line-height: 20/14*1;
       margin-top: rem-calc(4);
+      @include breakpoint(small only) {
+        font-size: rem-calc(12);
+      }
     }
   }
 

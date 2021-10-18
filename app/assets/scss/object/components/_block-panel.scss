@@ -1,5 +1,8 @@
 .c-block-panel {
   margin-bottom: rem-calc(80);
+  @include breakpoint(small only) {
+    margin-bottom: rem-calc(40);
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -17,8 +20,10 @@
       margin-left: 32px;
     }
     @include breakpoint(small only) {
-      margin-right: 16px;
-      margin-left: 16px;
+      margin-right: 20px;
+      margin-left: 20px;
+      border-radius: 20px;
+      padding: rem-calc(32) rem-calc(20) rem-calc(32);
     }
   }
 
@@ -29,10 +34,17 @@
     flex-direction: column;
     margin-bottom: rem-calc(60);
     text-align: center;
+    @include breakpoint(small only) {
+      margin-bottom: rem-calc(24);
+    }
 
     img {
       width: 170px;
       margin-bottom: rem-calc(22);
+      @include breakpoint(small only) {
+        width: 120px;
+        margin-bottom: rem-calc(10);
+      }
     }
 
     h3 {
@@ -46,6 +58,9 @@
       position: relative;
       padding-left: rem-calc(20);
       padding-right: rem-calc(14);
+      @include breakpoint(small only) {
+        font-size: rem-calc(24);
+      }
 
       &:before,
       &:after {
@@ -59,6 +74,9 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%) translateY(4px) skew(20deg);
+        @include breakpoint(small only) {
+          height: 24px;
+        }
       }
 
       &:after {
@@ -78,6 +96,9 @@
       font-weight: 700;
       letter-spacing: 0.05em;
       line-height: 36/24*1;
+      @include breakpoint(small only) {
+        font-size: rem-calc(16);
+      }
     }
   }
 }

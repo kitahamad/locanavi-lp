@@ -72,7 +72,11 @@ export default class Anchor {
         throw new Error('ターゲットとなる要素を取得できませんでした。');
         return false;
       }
-      var top = anchorTarget.offset().top - 94;
+      var headerH = 94;
+      if (window.innerWidth <= 750) {
+        headerH = 70;
+      }
+      var top = anchorTarget.offset().top - headerH;
 
       // スクロールさせる
       $('body,html').animate({

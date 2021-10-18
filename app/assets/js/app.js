@@ -66,6 +66,7 @@ class App {
     this.Slidebar = new Slidebar();
     this.CurrentNav = new CurrentNav();
     this.Tab = new Tab();
+    var slidebar = this.Slidebar;
 
     //SPメニューの高さ取得
     function menuHight() {
@@ -348,6 +349,17 @@ class App {
       });
     }
 
+    function sliedbarButton() {
+      var button = $('.c-slidebar-menu a');
+
+      button.on('click', function () {
+        $('body').removeClass('is-slidebar-active');
+        slidebar.isActive = false;
+      });
+
+
+    }
+
 
     $(function () {
       menuSlide();
@@ -356,6 +368,7 @@ class App {
       slickSlider();
       infiniteSlider();
       loopSlider();
+      sliedbarButton();
     });
   }
 }

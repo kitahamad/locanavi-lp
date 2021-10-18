@@ -1,6 +1,10 @@
 .c-forms{
   padding-left: rem-calc(60);
   padding-right: rem-calc(95);
+  @include breakpoint(small only) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   &__text{
     text-align: center;
@@ -136,7 +140,7 @@
       align-items: center;
       margin-right: rem-calc(40);
       @include breakpoint(small only) {
-        margin-right: rem-calc(48);
+        margin-right: rem-calc(32);
         margin-bottom: rem-calc(8);
       }
     }

@@ -13,7 +13,7 @@ block body
   +c_main-visual()
   main.l-main
     section.l-section#problem
-      +c.block-problem
+      +c.block-problem.u-hidden-md
         +e.top
           +e.container
             +e.heading
@@ -91,6 +91,97 @@ block body
 
             div.u-mbs.is-top.is-xxlg
               +c_block-btn
+
+      +c.block-problem-sm.u-visible-md
+        +e.container
+          +e.heading
+            h2.c-heading.is-lg
+              small PROBLEM
+              p こんな<span>お悩み</span>、ありませんか？
+        +e.blocks
+          +e.block
+            +e.scrollbox
+              +e.inner
+                +e.trouble
+                  +e.box
+                    +e.text.
+                      <span>低予算</span>でも、ロケはしたい！<br>
+                      最高の画を撮って<br><span>ヒットさせたい！</span>
+                  +e.image: +img("img-problem-sm-01.png","プロデューサー・監督")
+                +e.arrow: +img("img-problem-sm-arrow.png","ここだけの話！ロケなび！なら…")
+                +e.result
+                  .c-card-problem
+                    .c-card-problem__item
+                      .c-card-problem__title
+                        p
+                          | 作品づくりの
+                          br
+                          | <span>予算から</span>協力！
+                      .c-card-problem__image: +img("img-problem-locanavi-01.png","プロデューサー・監督")
+                      .c-card-problem__box
+                        ul.c-card-problem__list
+                          li 値引き交渉や「あご・あし・まくら」の<br>相談OK
+                          li 地域のロケハンツアーに無料ご招待
+                          li 国内の映像作品の補助金情報をご紹介
+                        .c-card-problem__button
+                          a(href="").c-button.is-primary.is-exlink ロケなび！コンシェルジュへ
+          +e.block
+            +e.scrollbox
+              +e.inner
+                +e.trouble
+                  +e.box
+                    +e.text.
+                      <span>コロナで協力的なロケ地</span>が<br>
+                      分からない！<br>
+                      ロケ先のトラブルも怖い！
+                  +e.image: +img("img-problem-sm-02.png","制作部")
+                +e.arrow: +img("img-problem-sm-arrow.png","ここだけの話！ロケなび！なら…")
+                +e.result
+                  .c-card-problem
+                    .c-card-problem__item
+                      .c-card-problem__title
+                        p
+                          | ロケ対応は指導済！
+                          br
+                          | 万全な<span>協力体制</span>
+                      .c-card-problem__image: +img("img-problem-locanavi-02.png","制作部")
+                      .c-card-problem__box
+                        ul.c-card-problem__list
+                          li 台本・企画内容をしっかり把握し、撮影に積極的な屋上・オフィスなど人気施設を無料で紹介
+                          li 協力体制の整っている、ロケ弁店、機材・求人・車両などの撮影サポートの検索も可能
+                          li トラブルなく安心して撮影できるロケ場所を紹介
+                        .c-card-problem__button
+                          a(href="").c-button.is-primary.is-exlink 急なロケもロケなび！へ
+          +e.block
+            +e.scrollbox
+              +e.inner
+                +e.trouble
+                  +e.box
+                    +e.text.
+                      ネットのネタは使えない！<br>
+                      でも<br>
+                      <span>リサーチする予算もない！</span>
+                  +e.image: +img("img-problem-sm-03.png","AD")
+                +e.arrow: +img("img-problem-sm-arrow.png","ここだけの話！ロケなび！なら…")
+                +e.result
+                  .c-card-problem
+                    .c-card-problem__item
+                      .c-card-problem__title
+                        p
+                          | ロケ地、地域ネタ、
+                          br
+                          | さらにリサーチまで<span>無料</span>！
+                      .c-card-problem__image: +img("img-problem-locanavi-03.png","AD")
+                      .c-card-problem__box
+                        ul.c-card-problem__list
+                          li 地域のグルメや面白い人・<br>話題のスポットも無料で検索
+                          li 地元でしか知られていない珍しいネタの<br>提供料も無料
+                          li ロケ地、ロケ弁、機材・求人・車両、<br>打ち上げ会場なども無料で検索！
+                        .c-card-problem__button
+                          a(href="").c-button.is-primary.is-exlink 情報バラエティネタが豊富！
+
+
+
 
     section.l-section.is-xxxlg#about
       +c.block-number-box
@@ -281,9 +372,9 @@ block body
           +c.block-normal
             +e.blocks
               +e.block
-                +e.image: +img("img-free-01.jpg","『有吉くんの正直さんぽ（長崎県島原市）")
+                +e.image: +img("img-free-01.jpg","『有吉くんの正直さんぽ』（長崎県島原市）")
                 +e.content
-                  +e.title 『有吉くんの正直さんぽ（長崎県島原市）
+                  +e.title 『有吉くんの正直さんぽ』<br class="u-hidden-lg">（長崎県島原市）
                   +e("ul").list.c-list.is-icon
                     li 10スポット（飲食店、城、電車等）全て貸し切りでの撮影を可能に！
                     li 市長含め、コロナ下でもロケ歓迎ムード！
@@ -325,7 +416,7 @@ block body
         +c.block-notice
           +e.heading
             small いよいよ2/15より！
-            h2 ロケなび！<span>プレミアムサービス</span>開始予定！
+            h2 ロケなび！<br class="u-hidden-lg"><span>プレミアムサービス</span>開始予定！
           +e.box
             +e("ul").list
               li 掲載施設の値引き情報
@@ -336,7 +427,7 @@ block body
               などを<span>優先的に</span>ご案内いたします！<br>
               (3/15より会員登録スタート)
             +e.text.
-              ※2/15より<span>サイトリニューアル！</span>更に情報が探しやすく生まれ変わります！
+              ※2/15より<span>サイトリニューアル！</span>更に情報が探しやすく<br class="u-hidden-lg">生まれ変わります！
           +e.button
             a(href="").c-button.is-xlg <i class="fa fa-envelope" aria-hidden="true"></i>メルマガで最新ニュースを受け取る
 
@@ -345,7 +436,7 @@ block body
       .l-container
         +c.block-contact
           +e.heading
-            h2 ロケや撮影に関するご相談はこちら
+            h2 ロケや撮影に関する<br class="u-hidden-lg">ご相談はこちら
           +e.button
             a(href="tel:03-5157-0567").c-block-contact__tel.c-button
               p ロケなび！コンシェルジュ

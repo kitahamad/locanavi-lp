@@ -1,5 +1,8 @@
 .c-block-btn {
   text-align: center;
+  @include breakpoint(small only) {
+    padding: 0 rem-calc(20);
+  }
   &__text {
     display: inline-flex;
     align-items: center;
@@ -9,9 +12,9 @@
     line-height: 20/19*1;
     margin-bottom: rem-calc(12);
     position: relative;
-    @include breakpoint(medium down) {
-      font-size: rem-calc(10);
-      margin-bottom: rem-calc(6);
+    @include breakpoint(small only) {
+      font-size: rem-calc(14);
+      margin-bottom: rem-calc(10);
     }
 
     &:before {
@@ -24,9 +27,9 @@
       background-position: center center;
       background-size: contain;
       margin-right: rem-calc(10);
-      @include breakpoint(medium down) {
-        width: rem-calc(9);
-        height: rem-calc(10);
+      @include breakpoint(small only) {
+        width: rem-calc(14);
+        height: rem-calc(16);
         margin-right: rem-calc(5);
       }
     }
@@ -40,9 +43,9 @@
       background-position: center center;
       background-size: contain;
       margin-left: rem-calc(10);
-      @include breakpoint(medium down) {
-        width: rem-calc(9);
-        height: rem-calc(10);
+      @include breakpoint(small only) {
+        width: rem-calc(14);
+        height: rem-calc(16);
         margin-left: rem-calc(5);
       }
     }

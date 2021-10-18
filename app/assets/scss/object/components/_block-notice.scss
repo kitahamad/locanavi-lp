@@ -4,6 +4,9 @@
   &__heading {
     text-align: center;
     margin-bottom: rem-calc(42);
+    @include breakpoint(small only) {
+      margin-bottom: rem-calc(32);
+    }
 
     small {
       display: inline-block;
@@ -16,6 +19,9 @@
       position: relative;
       padding-left: rem-calc(20);
       padding-right: rem-calc(14);
+      @include breakpoint(small only) {
+        font-size: rem-calc(16);
+      }
 
       &:before,
       &:after {
@@ -29,12 +35,19 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%) translateY(4px) skew(25deg);
+        @include breakpoint(small only) {
+          height: 16px;
+          transform: translateY(-50%) translateY(2px) skew(25deg);
+        }
       }
 
       &:after {
         left: auto;
         right: 0;
         transform: translateY(-50%) translateY(4px) skew(-20deg);
+        @include breakpoint(small only) {
+          transform: translateY(-50%) translateY(2px) skew(-20deg);
+        }
       }
     }
 
@@ -45,6 +58,9 @@
       line-height: 42/38*1;
       margin-top: 0;
       margin-bottom: 0;
+      @include breakpoint(small only) {
+        font-size: rem-calc(24);
+      }
 
       span {
         color: $color-primary;
@@ -59,6 +75,10 @@
     border-radius: 20px;
     padding: rem-calc(50) rem-calc(112);
     margin-bottom: rem-calc(40);
+    @include breakpoint(small only) {
+      border-radius: 10px;
+      padding: rem-calc(32) rem-calc(24);
+    }
   }
 
   &__list {
@@ -72,6 +92,11 @@
       margin-bottom: rem-calc(28);
       position: relative;
       padding-left: rem-calc(40);
+      @include breakpoint(small only) {
+        font-size: rem-calc(18);
+        margin-bottom: rem-calc(16);
+        padding-left: rem-calc(32);
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -89,6 +114,9 @@
         position: absolute;
         left: 0;
         top: 10px;
+        @include breakpoint(small only) {
+          top: 6px;
+        }
       }
     }
   }
@@ -103,17 +131,27 @@
     letter-spacing: 0.05em;
     line-height: 38/24*1;
     margin-bottom: rem-calc(20);
+    @include breakpoint(small only) {
+      font-size: rem-calc(18);
+      margin-bottom: rem-calc(20);
+    }
 
     span {
       font-size: rem-calc(32);
       line-height: 38/32*1;
       color: $color-primary;
+      @include breakpoint(small only) {
+        font-size: rem-calc(22);
+      }
     }
   }
 
   &__button {
     text-align: center;
     margin-top: rem-calc(38);
+    @include breakpoint(small only) {
+      margin-top: rem-calc(32);
+    }
 
     .c-button {
 

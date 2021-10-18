@@ -4,6 +4,10 @@
     align-items: center;
     justify-content: flex-start;
     margin-bottom: rem-calc(80);
+    @include breakpoint(medium down) {
+      display: block;
+      margin-bottom: rem-calc(40);
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -13,6 +17,11 @@
     width: rem-calc(351);
     margin-right: rem-calc(50);
     flex: none;
+    @include breakpoint(medium down) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: rem-calc(20);
+    }
   }
 
   &__content {
@@ -25,6 +34,10 @@
     letter-spacing: 0.05em;
     line-height: 36/24*1;
     margin-bottom: rem-calc(26);
+    @include breakpoint(medium down) {
+      font-size: rem-calc(18);
+      margin-bottom: rem-calc(20);
+    }
   }
 
   &__list {
@@ -32,6 +45,10 @@
       font-size: rem-calc(18);
       letter-spacing: 0.05em;
       line-height: 37/18*1;
+      @include breakpoint(medium down) {
+        font-size: rem-calc(14);
+        line-height: 24/14*1;
+      }
       &:before {
         top: 5px;
       }

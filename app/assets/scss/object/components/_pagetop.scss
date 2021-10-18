@@ -3,6 +3,11 @@
   right: 50px;
   top: 50%;
   transform: translateY(-50%);
+  @include breakpoint(small only) {
+    right: 20px;
+    top: auto;
+    bottom: 0;
+  }
 
   a {
     display: flex;
@@ -18,5 +23,10 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.16);
     text-decoration: none;
     border-radius: 1000px;
+    @include breakpoint(small only) {
+      width: rem-calc(48);
+      height: rem-calc(48);
+      font-size: rem-calc(24);
+    }
   }
 }

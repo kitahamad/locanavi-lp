@@ -17,7 +17,8 @@
   letter-spacing: 0.05em;
   line-height: 42/38*1;
   @include breakpoint(small only) {
-
+    margin-bottom: rem-calc(32);
+    font-size: rem-calc(24);
   }
 
   small {
@@ -28,6 +29,9 @@
     line-height: 42/24*1;
     position: relative;
     margin-bottom: rem-calc(10);
+    @include breakpoint(small only) {
+      font-size: rem-calc(16);
+    }
 
     &:after {
       content: "";
@@ -45,6 +49,9 @@
     width: 232px;
     vertical-align: bottom;
     margin-right: rem-calc(10);
+    @include breakpoint(small only) {
+      width: 172px;
+    }
   }
 
   span {
@@ -59,8 +66,9 @@
   text-align: center;
   margin-bottom: rem-calc(56);
   @include breakpoint(small only) {
-    font-size: rem-calc(32)*0.8;
-    margin-bottom: rem-calc(24)/2;
+    font-size: rem-calc(24);
+    margin-bottom: rem-calc(32);
+    letter-spacing: 0;
   }
 
   small {
@@ -72,6 +80,7 @@
     line-height: 24/18*1;
     margin-bottom: rem-calc(8);
     @include breakpoint(small only) {
+      font-size: rem-calc(16);
     }
   }
 

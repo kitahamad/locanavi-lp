@@ -8,6 +8,11 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
     margin-bottom: rem-calc(30);
     padding: rem-calc(60) rem-calc(40) rem-calc(40) rem-calc(92);
+    @include breakpoint(medium down) {
+      display: block;
+      border-radius: 10px;
+      padding: rem-calc(32) rem-calc(16) rem-calc(32);
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -19,6 +24,11 @@
     max-width: rem-calc(304);
     margin-right: rem-calc(50);
     flex: none;
+    @include breakpoint(medium down) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: rem-calc(16);
+    }
 
     img {
       border-radius: 8px;
@@ -40,6 +50,12 @@
     line-height: 36/24*1;
     color: $color-primary;
     margin-bottom: rem-calc(24);
+    @include breakpoint(medium down) {
+      display: block;
+      width: 100%;
+      font-size: rem-calc(16);
+      margin-bottom: rem-calc(16);
+    }
     &:before {
       content: "";
       display: block;
@@ -51,6 +67,13 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
+      @include breakpoint(medium down) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: rem-calc(10);
+        width: rem-calc(24);
+        height: rem-calc(32);
+      }
     }
   }
 
@@ -61,6 +84,10 @@
       line-height: 32/18*1;
       padding-left: rem-calc(30);
       position: relative;
+      @include breakpoint(medium down) {
+        font-size: rem-calc(14);
+        padding-left: 24px;
+      }
       &:before {
         content: "";
         display: block;
@@ -78,5 +105,9 @@
   &__button {
     text-align: right;
     margin-top: rem-calc(15);
+    @include breakpoint(medium down) {
+      text-align: center;
+      margin-top: rem-calc(16);
+    }
   }
 }

@@ -1,4 +1,4 @@
-.c-forms{
+.c-forms {
   padding-left: rem-calc(60);
   padding-right: rem-calc(95);
   @include breakpoint(small only) {
@@ -6,16 +6,18 @@
     padding-right: 0;
   }
 
-  &__text{
+  &__text {
     text-align: center;
     margin-bottom: rem-calc(32);
   }
+
   &__block {
     display: flex;
     @include breakpoint(small only) {
       display: block;
     }
   }
+
   &__title {
     min-width: rem-calc(268);
     margin-right: rem-calc(40);
@@ -34,19 +36,23 @@
       padding: rem-calc(12) 0 0;
       font-weight: 700;
     }
+
     &.is-vertical-top {
       align-items: flex-start;
-      &.is-just{
+
+      &.is-just {
         padding-top: rem-calc(40);
         @include breakpoint(small only) {
           padding-top: rem-calc(12);
         }
       }
+
       .c-forms__label {
         margin-top: rem-calc(3);
       }
     }
   }
+
   //ラベル
   &__label {
     display: inline-flex;
@@ -62,34 +68,42 @@
     margin-left: rem-calc(16);
     min-width: rem-calc(58);
   }
+
   &__content {
     width: 100%;
     padding: rem-calc(16) 0;
     @include breakpoint(small only) {
       padding: rem-calc(12) 0;
     }
-    &.is-column{
+
+    &.is-column {
       display: flex;
       justify-content: space-between;
+
       .c-forms-simple__input {
         margin-right: 24px;
+
         &:last-of-type {
           margin-right: 0;
         }
       }
-      input{
+
+      input {
         width: 100%;
       }
     }
+
     &.is-vertical-middle {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
     }
   }
+
   //インプット
   &__input {
     width: 100%;
+
     input {
       border-color: #707070;
       background-color: $color-white;
@@ -97,22 +111,27 @@
       @include breakpoint(small only) {
         padding: rem-calc(12) rem-calc(16);
       }
-      &:focus{
+
+      &:focus {
         border-color: $color-primary;
       }
+
       &[type="file"] {
         padding: 0;
         background-color: transparent;
       }
     }
+
     &.is-sm {
       width: rem-calc(180);
+
       input {
         padding-top: rem-calc(12);
         padding-bottom: rem-calc(12);
       }
     }
   }
+
   &__textarea {
     textarea {
       border-color: #707070;
@@ -121,20 +140,28 @@
       @include breakpoint(small only) {
         padding: rem-calc(12) rem-calc(16);
       }
-      &:focus{
+
+      &:focus {
         border-color: $color-primary;
       }
     }
   }
+
   //ラジオボタン,チェックボックス
   &__radio,
   &__checkbox {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
     > span {
       margin-bottom: rem-calc(8);
+      @include breakpoint(small only) {
+        width: 100%;
+        margin-bottom: 0;
+      }
     }
+
     label {
       display: flex;
       align-items: center;
@@ -144,6 +171,7 @@
         margin-bottom: rem-calc(8);
       }
     }
+
     input {
       margin-right: rem-calc(8);
       margin-top: rem-calc(2);
@@ -157,30 +185,36 @@
       }
     }
   }
+
   &__checkbox {
     input {
       margin-right: rem-calc(6);
       margin-top: rem-calc(4);
     }
   }
+
   &__privacy {
     text-align: center;
     @include breakpoint(small only) {
       margin-top: rem-calc(16);
     }
-    input{
+
+    input {
       margin-right: rem-calc(10);
     }
+
     a {
       font-weight: 400;
       text-decoration: underline;
       color: $font-base-color;
     }
   }
-  &__flex-al{
+
+  &__flex-al {
     display: flex;
     align-items: center;
   }
+
   &__flexbox {
     display: flex;
     align-items: center;
@@ -188,12 +222,15 @@
     @include breakpoint(small only) {
       display: block;
     }
-    input{
+
+    input {
       width: 100%;
     }
+
     &:last-child {
       margin-bottom: 0;
     }
+
     span {
       min-width: rem-calc(120);
       display: block;
@@ -203,6 +240,7 @@
       }
     }
   }
+
   // 住所自動入力ボタン
   &__button {
     max-width: rem-calc(150);
@@ -218,6 +256,7 @@
       padding: rem-calc(9) rem-calc(12);
     }
   }
+
   // 送信ボタン
   &__submit {
     text-align: center;
@@ -233,6 +272,7 @@
         line-height: 1;
         margin-left: rem-calc(14);
       }
+
       &.is-arrow-left {
         i {
           margin-left: 0;
@@ -240,6 +280,7 @@
         }
       }
     }
+
     //横並び
     &.is-two-columns {
       .c-button {

@@ -16,7 +16,8 @@ import modaal from 'modaal';
 import modal from './app/modal.js';
 import {scrollfire} from "./app/scrolltrigger.js";
 import anime from 'animejs';
-
+import {gsap} from "gsap";
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
 import fontAwesome from "font-awesome/scss/font-awesome.scss";
 import OwlCss from "owl.carousel/dist/assets/owl.carousel.css";
@@ -316,7 +317,7 @@ class App {
         // 親divをアニメーションさせる
         function galleryAnimate() {
           let start = 0,
-              end = 0;
+            end = 0;
           $.each(targetInner, function (i, el) {
             if ($(el).hasClass('is-reverse')) {
               start = '-' + (selfChildList * selfChildItemLength) / 3 * 2 + 'px';
@@ -356,7 +357,35 @@ class App {
         $('body').removeClass('is-slidebar-active');
         slidebar.isActive = false;
       });
+    }
 
+    function scrollAnim() {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap
+        .timeline({
+          defaults: {ease: "rough", duration: 1}, // timelineのプロパティ
+          scrollTrigger: {
+            markers: true, // マーカーを表示するか（開発用）
+            trigger: ".c-block-problem__item", // この要素と交差するとイベントが発火
+            start: "top 90%", // ウィンドウのどの位置を発火の基準点にするか
+            end: "bottom top", // ウィンドウのどの位置をイベントの終了点にするか
+            toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
+          },
+        })
+        .fromTo(".c-block-problem__item",
+          {
+            opacity: 0,
+            y: 100,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            stagger: {
+              from: "start", //左側から
+              amount: 0.8 // 0.8秒おきに
+            }
+          })
 
     }
 
@@ -364,11 +393,12 @@ class App {
     $(function () {
       menuSlide();
       owlCarousel();
-      reveal();
+      // reveal();
       slickSlider();
       infiniteSlider();
       loopSlider();
       sliedbarButton();
+      scrollAnim();
     });
   }
 }

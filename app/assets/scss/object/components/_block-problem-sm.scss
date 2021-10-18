@@ -1,7 +1,7 @@
 .c-block-problem-sm {
   @include breakpoint(medium down) {
     padding-top: rem-calc(40);
-    padding-bottom: rem-calc(40);
+    //padding-bottom: rem-calc(40);
   }
   &__container {
     @include breakpoint(medium down) {
@@ -31,6 +31,7 @@
   &__inner {
     width: calc(100% + 48px);
     margin-left: -24px;
+    margin-right: rem-calc(24);
     padding-left: rem-calc(24);
     padding-right: rem-calc(24);
     padding-bottom: rem-calc(24);

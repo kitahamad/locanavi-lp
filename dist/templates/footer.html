@@ -1,0 +1,188 @@
+</main>
+<footer class="l-footer">
+  <div class="l-footer__content">
+    <div class="c-pagetop">
+      <a class="js-anchor" href="#" data-anchor-target="html"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    </div>
+    <div class="l-container">
+      <div class="l-footer__inner">
+        <div class="l-footer__title">
+          <a class="l-footer__logo" href="https://locanavi.com/" target="_blank">
+            <img src="/assets/images/logo.png" alt="ロケなび！" />
+          </a>
+          <div class="l-footer__company"><span>運営会社</span>
+            <a href="https://www.chiikikassei.co.jp/" target="_blank">地域活性プランニング</a>
+          </div>
+        </div>
+        <div class="l-footer__sns">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/locationnavi/" target="_blank">
+                <img src="/assets/images/icon-instagram.svg" alt="Instagram" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/locanavi/" target="_blank">
+                <img src="/assets/images/icon-facebook.svg" alt="Facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="" target="_blank">
+                <img src="/assets/images/icon-line.svg" alt="LINE" />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/locanavi" target="_blank">
+                <img src="/assets/images/icon-twitter.svg" alt="Twitter" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l-footer__copyright">
+    <small>Copyright © 2008-<span class="js-current-year"></span> Location Japan All right reserved.</small>
+  </div>
+</footer>
+
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/scripts.js"></script>
+<!-- バリデーション、住所自動入力ここからコピペ -->
+<script type="text/javascript" src="https://ajaxzip3.github.io/ajaxzip3.js?ver=1.0.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<style type="text/css" media="screen">
+    .c-forms__content {
+        position: relative;
+        padding-bottom: 14px;
+    }
+
+    .c-forms__privacy label.c-errortooltip,
+    .c-forms__content label.c-errortooltip {
+        background: #dd5a00;
+        color: #fff;
+        font-size: 12px;
+        display: inline-block;
+        padding: 2px 8px;
+        position: absolute;
+        bottom: 10px;
+        right: 0px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        margin-right: 0;
+    }
+
+    .c-forms__privacy label.c-errortooltip {
+      right: 50%;
+      transform: translateX(270px);
+      bottom: 0;
+    }
+
+    @media screen and (min-width: 0em) and (max-width: 46.8125em) {
+      .c-forms__privacy label.c-errortooltip {
+        right: 0;
+        transform: translateX(0) translateY(100%);
+      }
+    }
+
+    .c-forms__privacy {
+      position: relative;
+    }
+
+    .c-forms__privacy label.c-errortooltip:before,
+    .c-forms__content label.c-errortooltip:before {
+        content: "\f071";
+        font-family: FontAwesome;
+        margin-right: 4px;
+    }
+
+    .c-forms__content input.c-errortooltip,
+    .c-forms__content textarea.c-errortooltip {
+        background: #ffdede;
+    }
+</style>
+<script>
+    (function ($) {
+        $(function () {
+            $.extend(jQuery.validator.messages, {
+                required: "必須です",
+                email: "有効なメールアドレスをご入力ください",
+                url: "正しいURLを入力してください。",
+                date: "正しい形式の日付を入力してください。",
+                dateISO: "ISOに乗っ取った正しい形式の日付を入力してください。",
+                number: "数字でご入力ください。",
+                digits: "Please enter only digits.",
+                creditcard: "正しいクレジットカード番号を入力してください。",
+                equalTo: "Please enter the same value again.",
+                accept: "Please enter a value with a valid extension.",
+                maxlength: $.validator.format("Please enter no more than {0} characters."),
+                minlength: $.validator.format("Please enter at least {0} characters."),
+                rangelength: $.validator.format("Please enter a value between {0} and {1} characters long."),
+                range: $.validator.format("Please enter a value between {0} and {1}."),
+                max: $.validator.format("Please enter a value less than or equal to {0}."),
+                min: $.validator.format("Please enter a value greater than or equal to {0}."),
+                phone: "正しい電話番号の形式で入力してください",
+                zip: "正しい郵便番号の形式で入力してください"
+            });
+            var methods = {
+                phone: function (value, element) {
+                    // return this.optional(element) || /^\d{11}$|^\d{3}-\d{4}-\d{4}$|^\d{3}-\d{4}-\d{4}$/.test(value);
+                    return this.optional(element) || /^\d{0,11}$|^\d{1,4}-\d{1,4}-\d{3,4}$/.test(value);
+                },
+                zip: function (value, element) {
+                    return this.optional(element) || /^\d{3}-\d{4}$|^\d{7}$/.test(value)
+                }
+            };
+            //メソッドの追加
+            $.each(methods, function (key) {
+                $.validator.addMethod(key, this);
+            });
+            var validate_settings = {
+                onkeyup: function (element) {
+                    $(element).valid()
+                },
+                onfocusout: function (element) {
+                    $(element).valid()
+                },
+                rules: {},
+                errorClass: 'c-errortooltip'
+            }
+            var $validator = $("form").validate(validate_settings);
+
+            var charactersChange = function (ele) {
+                var val = ele.val();
+                var han = val.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function (s) {
+                    return String.fromCharCode(s.charCodeAt(0) - 0xFEE0)
+                });
+                if (val.match(/[Ａ-Ｚａ-ｚ０-９]/g)) {
+                    $(ele).val(han);
+                }
+                var hai = han.replace(/[ー−-]/g, "");
+                if (val.match(/[ー−-]/g)) {
+                    $(ele).val(hai);
+                }
+                setTimeout(function () {
+                    $(ele).valid()
+                }, 100)
+            }
+
+            $("input[name=郵便番号],input[name=電話番号],input[name=年齢]").blur(function () {
+                charactersChange($(this));
+            });
+
+            // 住所自動入力
+            $(".js-zipauto").on("click", function (e) {
+                e.preventDefault();
+                var $input = $("input[name=郵便番号]");
+                AjaxZip3.onFailure = function () {
+                    $("input[name=ご住所]").val("")
+                }
+                AjaxZip3.zip2addr($input[0], '', 'ご住所', 'ご住所');
+            })
+        })
+    })(jQuery);
+</script>
+<!-- バリデーション、住所自動入力: ここまで -->
+</body>
+</html>

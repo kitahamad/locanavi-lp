@@ -26840,10 +26840,28 @@ var App = function App() {
         trigger: ".c-main-visual",
         start: "top 90%"
       }
-    }).from(".c-main-visual__content", {
+    }).from(".c-main-visual__title", {
       opacity: 0,
       y: 20,
       delay: 0.6
+    }).from(".c-main-visual__text", {
+      opacity: 0,
+      y: 20,
+      delay: 0.2
+    }).from(".c-main-visual__item", {
+      opacity: 0,
+      y: 20,
+      delay: 0.5,
+      stagger: {
+        from: "start",
+        amount: 0.5
+      }
+    }).from(".c-main-visual__button", {
+      duration: 1,
+      ease: "elastic.out(1, 0.3)",
+      opacity: 0,
+      scale: 0.5,
+      delay: 0
     }).from(".c-main-visual__images", {
       opacity: 0,
       delay: 0.2
@@ -26902,7 +26920,7 @@ var App = function App() {
       delay: 0,
       stagger: {
         from: "start",
-        amount: 0.6
+        amount: 0.4
       }
     });
     gsap__WEBPACK_IMPORTED_MODULE_18__["gsap"].timeline({

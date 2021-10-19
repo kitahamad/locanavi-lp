@@ -6,6 +6,16 @@
     padding-right: 0;
   }
 
+  &.is-confirm {
+    padding: 0;
+
+    .c-forms__block {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
   &__text {
     text-align: center;
     margin-bottom: rem-calc(32);

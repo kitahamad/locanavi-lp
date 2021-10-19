@@ -102,6 +102,13 @@
     }
   }
 
+  &.is-top-margin {
+    margin-top: rem-calc(94);
+    @include breakpoint(medium down) {
+      margin-top: rem-calc(70);
+    }
+  }
+
   // マージン設定
   &.is-top {
     padding-bottom: 0 !important;

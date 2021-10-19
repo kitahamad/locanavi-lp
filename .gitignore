@@ -70,7 +70,6 @@ bower_components
 .bower-tmp
 
 ### App ###
-dist/
 styleguide/
 base/
 tests/results/

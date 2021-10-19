@@ -98,6 +98,9 @@
         position: absolute;
         left: 0;
         top: 10px;
+        @include breakpoint(small only) {
+          top: 7px;
+        }
       }
     }
   }

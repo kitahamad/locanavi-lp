@@ -18,6 +18,7 @@ import {scrollfire} from "./app/scrolltrigger.js";
 import anime from 'animejs';
 import {gsap} from "gsap";
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger);
 
 import fontAwesome from "font-awesome/scss/font-awesome.scss";
 import OwlCss from "owl.carousel/dist/assets/owl.carousel.css";
@@ -360,32 +361,210 @@ class App {
     }
 
     function scrollAnim() {
-      gsap.registerPlugin(ScrollTrigger);
 
       gsap
         .timeline({
-          defaults: {ease: "rough", duration: 1}, // timelineのプロパティ
+          defaults: {ease: "circ.out", duration: 0.6},
           scrollTrigger: {
-            markers: true, // マーカーを表示するか（開発用）
-            trigger: ".c-block-problem__item", // この要素と交差するとイベントが発火
-            start: "top 90%", // ウィンドウのどの位置を発火の基準点にするか
-            end: "bottom top", // ウィンドウのどの位置をイベントの終了点にするか
-            toggleActions: "restart none none none", // スクロールイベントで発火するアニメーションの種
+            trigger: ".c-main-visual",
+            start: "top 90%",
           },
         })
-        .fromTo(".c-block-problem__item",
+        .from(".c-main-visual__content", {
+          opacity: 0,
+          y: 20,
+          delay: 0.6,
+        })
+        .from(".c-main-visual__images", {
+          opacity: 0,
+          delay: 0.2,
+        })
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-block-problem__item",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-block-problem__item",
           {
             opacity: 0,
-            y: 100,
-          },
-          {
-            opacity: 1,
-            y: 0,
+            y: 20,
+            delay: 0.2,
             stagger: {
-              from: "start", //左側から
-              amount: 0.8 // 0.8秒おきに
+              from: "start",
+              amount: 0.6
             }
-          })
+          }
+        )
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-card-problem__item",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-card-problem__item",
+          {
+            opacity: 0,
+            y: 20,
+            delay: 0,
+            stagger: {
+              from: "start",
+              amount: 1.2
+            }
+          }
+        )
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-block-number-box__box",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-block-number-box__box",
+          {
+            opacity: 0,
+            y: 20,
+            delay: 0,
+            stagger: {
+              from: "start",
+              amount: 0.6
+            }
+          }
+        )
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-block-notice__box",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-block-notice__list li",
+          {
+            opacity: 0,
+            x: 10,
+            delay: 0,
+            stagger: {
+              from: "start",
+              amount: 0.4
+            }
+          }
+        )
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-card-acceptance__cards",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-card-acceptance__item",
+          {
+            opacity: 0,
+            y: 20,
+            delay: 0,
+            stagger: {
+              from: "start",
+              amount: 0.6
+            }
+          }
+        )
+
+
+      gsap.from(".c-block-notice__heading", {
+        duration: 1,
+        ease: "elastic.out(1, 0.3)",
+        opacity: 0,
+        scale: 0.5,
+        scrollTrigger: {
+          trigger: ".c-block-notice__heading",
+          start: "top 90%",
+        }
+      });
+
+      const headings = document.getElementsByClassName('c-heading');
+
+      for (let i = 0; i < headings.length; i++) {
+        gsap.from(headings[i], {
+          duration: 1,
+          ease: "elastic.out(1, 0.3)",
+          opacity: 0,
+          scale: 0.7,
+          scrollTrigger: {
+            trigger: headings[i],
+            start: "top 90%",
+          }
+        });
+      }
+
+      const panelTitles = document.getElementsByClassName('c-block-panel__heading');
+
+      for (let i = 0; i < panelTitles.length; i++) {
+        gsap.from(panelTitles[i], {
+          duration: 1,
+          ease: "elastic.out(1, 0.3)",
+          opacity: 0,
+          scale: 0.7,
+          scrollTrigger: {
+            trigger: panelTitles[i],
+            start: "top 90%",
+          }
+        });
+      }
+
+      const boxBlocks = document.getElementsByClassName('c-box-block__block');
+
+      for (let i = 0; i < boxBlocks.length; i++) {
+        gsap.from(boxBlocks[i], {
+          opacity: 0,
+          y: 20,
+          scrollTrigger: {
+            trigger: boxBlocks[i],
+            start: "top 90%",
+          }
+        });
+      }
+
+      const blockNormals = document.getElementsByClassName('c-block-normal__block');
+
+      for (let i = 0; i < blockNormals.length; i++) {
+        gsap.from(blockNormals[i], {
+          opacity: 0,
+          y: 20,
+          scrollTrigger: {
+            trigger: blockNormals[i],
+            start: "top 90%",
+          }
+        });
+      }
+
+      const blockComments = document.getElementsByClassName('c-block-comment');
+
+      for (let i = 0; i < blockComments.length; i++) {
+        gsap.from(blockComments[i], {
+          opacity: 0,
+          y: 20,
+          scrollTrigger: {
+            trigger: blockComments[i],
+            start: "top 90%",
+          }
+        });
+      }
 
     }
 
@@ -393,7 +572,6 @@ class App {
     $(function () {
       menuSlide();
       owlCarousel();
-      // reveal();
       slickSlider();
       infiniteSlider();
       loopSlider();

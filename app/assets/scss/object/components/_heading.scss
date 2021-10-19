@@ -1,10 +1,3 @@
-/*
----
-name: 見出し_テンプレート
-category: Heading
----
-*/
-
 .c-heading {
   margin-top: 0;
   margin-bottom: 0.5em;
@@ -17,52 +10,82 @@ category: Heading
 }
 
 .c-heading.is-xlg {
-  color: $color-primary;
-  margin-bottom: rem-calc(24);
+  text-align: center;
+  margin-bottom: rem-calc(40);
+  font-size: rem-calc(38);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 42/38*1;
   @include breakpoint(small only) {
-
-  }
-
-  span {
-    display: block;
-    @include webfont-bold();
-    font-size: rem-calc(42);
-    letter-spacing: 0.1em;
-    @include breakpoint(small only) {
-      font-size: rem-calc(42)*0.8;
-    }
+    margin-bottom: rem-calc(32);
+    font-size: rem-calc(24);
   }
 
   small {
-    display: block;
+    display: inline-block;
+    font-size: rem-calc(24);
     font-weight: 700;
-    font-size: rem-calc(16);
-    letter-spacing: 0.1em;
+    letter-spacing: 0;
+    line-height: 42/24*1;
+    position: relative;
+    margin-bottom: rem-calc(10);
     @include breakpoint(small only) {
-      font-size: rem-calc(16)*0.8;
+      font-size: rem-calc(16);
     }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-image: url(../images/img-heading-xlg-deco.png);
+      background-repeat: repeat-x;
+      background-position: left center;
+      background-size: 161px 3px;
+    }
+  }
+
+  img {
+    width: 232px;
+    vertical-align: bottom;
+    margin-right: rem-calc(10);
+    @include breakpoint(small only) {
+      width: 172px;
+    }
+  }
+
+  span {
+    color: $color-primary;
   }
 }
 
 .c-heading.is-lg {
-  color: $color-primary;
-  font-size: rem-calc(32);
-  letter-spacing: 0.1em;
-  margin-bottom: rem-calc(24);
+  font-size: rem-calc(38);
+  letter-spacing: 0.05em;
+  line-height: 42/38*1;
+  text-align: center;
+  margin-bottom: rem-calc(56);
   @include breakpoint(small only) {
-    font-size: rem-calc(32)*0.8;
-    margin-bottom: rem-calc(24)/2;
+    font-size: rem-calc(24);
+    margin-bottom: rem-calc(32);
+    letter-spacing: 0;
   }
 
   small {
     display: block;
     @include webfont-bold();
-    font-size: rem-calc(14);
-    letter-spacing: 0.1em;
-    margin-top: rem-calc(6);
+    color: $color-primary;
+    font-size: rem-calc(18);
+    letter-spacing: 0.05em;
+    line-height: 24/18*1;
+    margin-bottom: rem-calc(8);
     @include breakpoint(small only) {
-      font-size: rem-calc(14)*0.8;
+      font-size: rem-calc(16);
     }
+  }
+
+  span {
+    color: $color-primary;
   }
 }
 

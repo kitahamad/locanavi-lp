@@ -1,0 +1,84 @@
+.c-block-problem-sm {
+  @include breakpoint(medium down) {
+    padding-top: rem-calc(40);
+    //padding-bottom: rem-calc(40);
+  }
+  &__container {
+    @include breakpoint(medium down) {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+
+  &__heading {
+    @include breakpoint(medium down) {
+      margin-bottom: rem-calc(32);
+    }
+  }
+
+  &__block {
+    margin-bottom: rem-calc(24);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__scrollbox {
+    padding: rem-calc(24);
+    background-color: $color-secondary;
+  }
+
+  &__inner {
+    width: calc(100% + 48px);
+    margin-left: -24px;
+    margin-right: rem-calc(24);
+    padding-left: rem-calc(24);
+    padding-right: rem-calc(24);
+    padding-bottom: rem-calc(24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: scroll;
+    @include breakpoint(small only) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__trouble {
+    width: 164px;
+    flex: none;
+  }
+
+  &__box {
+    background-color: $color-white;
+    border-radius: 20px;
+    padding: rem-calc(12) rem-calc(10);
+    margin-bottom: rem-calc(10);
+  }
+
+  &__text {
+    text-align: center;
+    font-size: rem-calc(11);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 22/11*1;
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  &__image {
+    text-align: center;
+    img {
+      width: 100%;
+      max-width: rem-calc(228);
+    }
+  }
+
+  &__arrow {
+    width: 126px;
+    flex: none;
+    margin-right: rem-calc(24);
+  }
+}

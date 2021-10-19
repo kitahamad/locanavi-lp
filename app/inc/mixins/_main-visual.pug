@@ -1,9 +1,28 @@
 //- メインビジュアル
 mixin c_main-visual
   +c.main-visual
-    +e.slider.owl-carousel
-      +bgimg("img-main-visual-01.jpg").c-main-visual__image
-      +bgimg("img-main-visual-01.jpg").c-main-visual__image
-      +bgimg("img-main-visual-01.jpg").c-main-visual__image
-    +e.inner
-      +e.text: +img("img-main-visual-text.png","キャッチコピーが入ります")
+    +e.wrap
+      +e.inner
+        +e.content
+          +e.title 知っていますか？
+          +e.text
+            span
+              +img("logo-main-visual.png","ロケなび！")
+              | は、
+            br
+            | ロケ地検索だけじゃないんです！！
+          +e.items
+            +e.item: p <span>地域ロケ</span>の<br>協力！
+            +e.item: p 全国各地の<br><span>ネタ提供！<br>リサーチ協力！</span>
+            +e.item: p 撮影の<br>充実した<br><span>サポート！</span>
+          +e.button
+            +c_block-btn
+        +e.images
+          +e.slider.js-loop-slider
+            +bgimg("img-main-visual-01.jpg").c-main-visual__image
+            +bgimg("img-main-visual-02.jpg").c-main-visual__image
+            +bgimg("img-main-visual-03.jpg").c-main-visual__image
+          +e.slider.js-loop-slider.is-reverse
+            +bgimg("img-main-visual-04.jpg").c-main-visual__image
+            +bgimg("img-main-visual-05.jpg").c-main-visual__image
+            +bgimg("img-main-visual-06.jpg").c-main-visual__image

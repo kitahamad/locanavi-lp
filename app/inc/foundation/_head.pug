@@ -25,6 +25,7 @@ html(lang="ja")
       meta(name='description', content=getPagesValue(id, "description"))
       meta(name="viewport", content=config.site.viewport)
       meta(name="format-detection" , content="telephone=no")
+      meta(name="keyword", content="ロケ,ロケなび,ドラマ,映画,ロケ地,ロケハン")
 
     //- OGP
     block meta_ogp
@@ -89,3 +90,11 @@ html(lang="ja")
     //- フッターに組み込むスクリプト
     block footer_scripts
       +script('/assets/js/app.js')
+      script.
+        (function (d, t) {
+          var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          pp.src = '//app.pageproofer.com/embed/a802df5a-ec34-529c-b877-cf0d48f46324';
+          pp.type = 'text/javascript';
+          pp.async = true;
+          s.parentNode.insertBefore(pp, s);
+        })(document, 'script');

@@ -1,106 +1,230 @@
-/*
----
-name: メインビジュアル_通常
-category: Components
----
-*/
-
 .c-main-visual {
   width: 100%;
   position: relative;
+  padding: rem-calc(72) 0 rem-calc(68) rem-calc(68);
+  background-color: $color-primary;
+  overflow: hidden;
+  margin-top: rem-calc(94);
+  @include breakpoint(medium down) {
+    margin-top: rem-calc(70);
+    padding: rem-calc(52) 0;
+  }
 
-  &__image {
+  &__wrap {
     width: 100%;
-    height: rem-calc(620);
-    top: 0;
-    left: 0;
-    @include bg-option();
-    @include breakpoint(medium down) {
-      height: 50vw;
-      min-height: 280px;
+    background-color: $color-white;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-top: rem-calc(36);
+    padding-bottom: rem-calc(36);
+    padding-left: rem-calc(112);
+    @media (max-width: 1140px) {
+      padding-left: rem-calc(36);
     }
-
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba($color-black, 0.2);
-      top: 0;
-      left: 0;
+    @include breakpoint(medium down) {
+      border-radius: 0;
+      padding-top: rem-calc(60);
+      padding-bottom: rem-calc(52);
+      padding-left: rem-calc(14);
     }
   }
 
   &__inner {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: 99;
-    text-align: center;
-    padding: 0 rem-calc(16);
-    margin-top: rem-calc(32);
+    max-width: rem-calc(1400);
+    margin-left: auto;
+    margin-right: auto;
     @include breakpoint(medium down) {
-      margin-top: rem-calc(8);
+      max-width: rem-calc(750);
+    }
+  }
+
+  &__content {
+    display: inline-block;
+    text-align: center;
+    @include breakpoint(small only) {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__title {
+    font-size: rem-calc(54);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(28);
     }
   }
 
   &__text {
-    margin-bottom: rem-calc(40);
-    @include breakpoint(small only) {
-      margin-bottom: 4vw;
+    font-size: rem-calc(28);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.5;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(14);
+    }
+
+    span {
+      display: inline-block;
+      margin-bottom: rem-calc(2);
     }
 
     img {
-      width: 100%;
-      max-width: rem-calc(1048)/2;
-      height: auto;
-      margin: 0 auto;
+      width: 274px;
+      vertical-align: bottom;
+      margin-right: rem-calc(14);
       @include breakpoint(medium down) {
-        width: 90%;
-        max-width: rem-calc(420);
+        width: 173px;
       }
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: rem-calc(18);
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 1000px;
+    background-color: $color-secondary;
+    width: rem-calc(160);
+    height: rem-calc(160);
+    font-size: rem-calc(18);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 26/18*1;
+    margin-right: rem-calc(16);
+    @include breakpoint(medium down) {
+      width: rem-calc(78);
+      height: rem-calc(78);
+      margin-right: rem-calc(3);
+      font-size: rem-calc(10);
+    }
+    @include breakpoint(small only) {
+      p {
+        transform: scale(0.9);
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      display: inline;
+      color: $color-primary;
     }
   }
 
   &__button {
-    .c-button {
-      max-width: rem-calc(252) !important;
+    margin-top: rem-calc(21);
+    @include breakpoint(medium down) {
+      margin-top: rem-calc(24);
+      text-align: left;
+      .c-block-btn {
+        text-align: left;
+        padding: 0;
+      }
+      .c-block-btn__text {
+        font-size: rem-calc(10);
+        margin-bottom: rem-calc(6);
+
+        &:before {
+          width: rem-calc(9);
+          height: rem-calc(10);
+          margin-right: rem-calc(5);
+        }
+
+        &:after {
+          width: rem-calc(9);
+          height: rem-calc(10);
+          margin-left: rem-calc(5);
+        }
+      }
+    }
+
+    .c-button.is-xlg {
+      max-width: rem-calc(432);
+      height: rem-calc(70);
       @include breakpoint(medium down) {
-        padding: rem-calc(12) rem-calc(24);
-        max-width: rem-calc(198) !important;
+        max-width: rem-calc(196);
+        height: rem-calc(38);
+        font-size: rem-calc(11);
+
+        i {
+          font-size: rem-calc(15);
+          margin-right: rem-calc(4);
+        }
       }
     }
   }
 
-  // owl.calousel
-  .owl-dots {
-    position: absolute;
-    bottom: rem-calc(32);
-    left: 0;
-    width: 100%;
-    z-index: 99;
+
+  &__images {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    //right: 50px;
+    right: 50%;
+    top: 0;
+    transform: rotate(5deg) translateX(650px);
+    @media (max-width: 1400px) {
+      width: 686/1400*100%;
+    }
+    @media (max-width: 1140px) {
+      transform: rotate(5deg) translateX(550px);
+    }
     @include breakpoint(medium down) {
-      bottom: rem-calc(16);
+      width: auto;
+      transform: rotate(9deg) translateX(235px);
+    }
+    @include breakpoint(small only) {
+      transform: rotate(9deg) translateX(365px);
+    }
+  }
+
+  &__slider {
+    margin-right: rem-calc(10);
+    position: relative;
+    @media (max-width: 1400px) {
+      width: calc(50% - 5px);
+    }
+    @include breakpoint(medium down) {
+      width: auto;
     }
 
-    .owl-dot {
-      margin: 0 rem-calc(6);
-      width: rem-calc(12);
-      height: rem-calc(12);
-      background-color: $color-white;
-      border-radius: 1000px;
-      display: block;
-      outline: none;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 
-      &.active {
-        background-color: $color-primary !important;
-      }
+  &__image {
+    width: rem-calc(338);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: rem-calc(10);
+    border-radius: 10px;
+    @media (max-width: 1400px) {
+      width: 100%;
+    }
+    @include breakpoint(medium down) {
+      width: rem-calc(200);
+      margin-bottom: rem-calc(6);
+    }
+
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 230/338*100%;
     }
   }
 }

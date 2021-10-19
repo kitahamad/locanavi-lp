@@ -170,6 +170,13 @@
         margin-right: rem-calc(32);
         margin-bottom: rem-calc(8);
       }
+
+      span{
+        @include breakpoint(small only) {
+          display: inline-block;
+          width: 100%;
+        }
+      }
     }
 
     input {

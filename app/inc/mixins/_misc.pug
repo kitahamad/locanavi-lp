@@ -62,3 +62,10 @@ mixin link(href)
 
 mixin script(src)
   script(src=config.rootpath + src)&attributes(attributes)
+
+
+mixin c_block-btn()
+  .c-block-btn
+    .c-block-btn__text どんなご相談でもお待ちしてます
+    .c-block-btn__button
+      +a("#contact").c-button.is-xlg.js-anchor <i class="fa fa-phone" aria-hidden="true"></i>問合せする

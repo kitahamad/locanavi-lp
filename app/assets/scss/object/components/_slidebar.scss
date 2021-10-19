@@ -31,12 +31,11 @@ $slidebar-container-bg: rgba(0, 0, 0, 0.8) !default;
     font-size: rem-calc(12);
     z-index: 9999;
     text-decoration: none;
-    background-color: $color-primary;
+    background-color: $color-white;
     line-height: 1;
     color: $color-white;
-    width: rem-calc(55);
-    height: rem-calc(55);
-    padding-top: rem-calc(6);
+    width: rem-calc(70);
+    height: rem-calc(70);
 
     &:active,
     &:hover {
@@ -49,16 +48,17 @@ $slidebar-container-bg: rgba(0, 0, 0, 0.8) !default;
 
     // ボーダー
     &__line {
-      height: rem-calc(16) !important;
+      height: rem-calc(25) !important;
       display: block;
       > span {
         display: block;
-        width: rem-calc(26);
-        height: rem-calc(2);
-        background: $color-white;
+        width: rem-calc(30);
+        height: rem-calc(3);
+        background: $color-accent;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
+        border-radius: 1.5px;
         transition: all ease .2s;
 
         &:last-child {
@@ -66,28 +66,14 @@ $slidebar-container-bg: rgba(0, 0, 0, 0.8) !default;
         }
       }
     }
-
-    // メニューテキスト
-    &__text {
-      transition: all ease .2s;
-      font-size: 9px;
-      letter-spacing: 0.4px;
-      @include webfont();
-      margin-top: rem-calc(8);
-      display: block;
-
-      &.is-close {
-        display: none;
-      }
-    }
   }
 
   // メニュー自体
   .c-slidebar-menu {
-    height: calc(100vh - 55px) !important;
+    height: calc(100vh - 70px) !important;
     padding: 0 rem-calc(16) rem-calc(104);
     position: fixed;
-    background-color: $color-primary;
+    background-color: $color-white;
     z-index: 9980;
     width: $slidebar-menu-width;
     -webkit-transform: translateX(100%);
@@ -112,67 +98,11 @@ $slidebar-container-bg: rgba(0, 0, 0, 0.8) !default;
       opacity: 0;
     }
 
-    &__children {
-      width: 100%;
-      padding: 0 rem-calc(16);
-      display: none;
-      background-color: $color-primary-dark !important;
 
-      li {
-        &:last-child {
-          border-bottom: none !important;
-        }
-
-        a {
-          color: $color-white !important;
-          padding: rem-calc(16) 0 !important;
-
-          &:before,
-          &:after {
-            display: none;
-          }
-        }
-      }
-    }
-
-    &__parent {
-      a,
-      span {
-        position: relative;
-
-        &:after,
-        &:before {
-          content: "";
-          display: block;
-          width: rem-calc(2);
-          height: rem-calc(18);
-          background-color: $color-white;
-          position: absolute;
-          top: 50%;
-          right: rem-calc(24);
-          transform: translateY(-50%);
-        }
-
-        &:after {
-          width: rem-calc(18);
-          height: rem-calc(2);
-          right: rem-calc(16);
-        }
-      }
-
-      &.is-open {
-        a,
-        span {
-          &:before {
-            display: none;
-          }
-        }
-      }
-    }
 
     ul {
-      width: 100%;
-      background: $color-primary;
+      width: calc(100% + 32px);
+      margin-left: -16px;
 
       li {
         border-bottom: 1px solid $border-base-color;
@@ -181,10 +111,10 @@ $slidebar-container-bg: rgba(0, 0, 0, 0.8) !default;
         span {
           font-size: rem-calc(15);
           display: block;
-          padding: rem-calc(14) rem-calc(16);
+          padding: rem-calc(14) rem-calc(20);
           text-decoration: none;
-          color: $color-white;
-          font-weight: 400;
+          color: $font-base-color;
+          font-weight: 700;
         }
       }
     }
@@ -195,17 +125,15 @@ $slidebar-container-bg: rgba(0, 0, 0, 0.8) !default;
       background-color: $color-white;
       color: $color-primary;
       font-size: rem-calc(16);
+      text-align: center;
 
-      &:before {
-        content: "\f0e0";
-        font-family: "FontAwesome";
-        color: $color-primary;
-        font-size: rem-calc(18);
-        margin-right: rem-calc(12);
-      }
+      .c-button {
+        height: rem-calc(70);
+        font-size: rem-calc(16);
 
-      &:after {
-        content: none;
+        i {
+          font-size: rem-calc(18);
+        }
       }
     }
 
@@ -261,11 +189,11 @@ $slidebar-container-bg: rgba(0, 0, 0, 0.8) !default;
       &__line {
         > span {
           &:nth-child(1) {
-            transform: rotate(-45deg) translateY(4px) translateX(-4px);
+            transform: rotate(-45deg) translateY(7px) translateX(-8px);
           }
 
           &:nth-child(2) {
-            transform: rotate(45deg) translateY(-1px) translateX(-1px);
+            transform: rotate(45deg) translateY(0px) translateX(0px);
           }
 
           &:nth-child(3) {
@@ -308,7 +236,7 @@ $slidebar-container-bg: rgba(0, 0, 0, 0.8) !default;
         transform: translate3d(0px, 0px, 0px);
 
         &:after {
-          top: 55px;
+          top: 70px;
         }
       }
     }
@@ -318,8 +246,8 @@ $slidebar-container-bg: rgba(0, 0, 0, 0.8) !default;
       transform: translate3d(0, 0, 0);
 
       &.is-top-to-bottom {
-        -webkit-transform: translateY(55px);
-        transform: translate3d(0, 55px, 0);
+        -webkit-transform: translateY(70px);
+        transform: translate3d(0, 70px, 0);
         opacity: 1;
       }
     }

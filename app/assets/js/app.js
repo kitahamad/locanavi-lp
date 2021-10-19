@@ -16,7 +16,9 @@ import modaal from 'modaal';
 import modal from './app/modal.js';
 import {scrollfire} from "./app/scrolltrigger.js";
 import anime from 'animejs';
-
+import {gsap} from "gsap";
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger);
 
 import fontAwesome from "font-awesome/scss/font-awesome.scss";
 import OwlCss from "owl.carousel/dist/assets/owl.carousel.css";
@@ -28,16 +30,16 @@ import slickTheme from "slick-carousel/slick/slick-theme.css";
 
 
 class ScrollReveal {
-  constructor(options){
+  constructor(options) {
     this.options = options;
   }
 
-  reveal(el, options, duration){
+  reveal(el, options, duration) {
     $(el).css({
       visibility: "visible",
       opacity: 0,
     })
-    scrollfire( el, function(){
+    scrollfire(el, function () {
       // console.log(el);
       var args = {
         targets: el,
@@ -45,7 +47,7 @@ class ScrollReveal {
         // translateY: -options.distance,
         // duration: 600
       }
-      args = Object.assign(options,args);
+      args = Object.assign(options, args);
       anime(args);
     }, {
       offset: window.innerHeight
@@ -66,6 +68,7 @@ class App {
     this.Slidebar = new Slidebar();
     this.CurrentNav = new CurrentNav();
     this.Tab = new Tab();
+    var slidebar = this.Slidebar;
 
     //SPメニューの高さ取得
     function menuHight() {
@@ -132,7 +135,7 @@ class App {
       });
       //->カード_カルーセル
       owls.imagesLoaded(function () {
-        if ($('.js-card-slider').find('.c-card__block').length < 3){
+        if ($('.js-card-slider').find('.c-card__block').length < 3) {
           $('.js-card-slider').toggleClass('owl-carousel');
           return false;
         }
@@ -161,6 +164,7 @@ class App {
         });
       });
     }
+
     //- スクロールリーバル
     function reveal() {
       function domEach(items, callback) {
@@ -173,6 +177,7 @@ class App {
           callback(i, item);
         }
       }
+
       window.sr = new ScrollReveal({duration: 600, mobile: true});
       var baseEasing = 'cubicBezier(0.175, 0.885, 0.32, 1.275)';
       var baseDistance = '8';
@@ -184,36 +189,35 @@ class App {
         delay: 900,
       }, 100);
 
-      sr.reveal(".c-solution__wrap  > *",{
+      sr.reveal(".c-solution__wrap  > *", {
         scale: [0.9, 1],
         opacity: 1,
         duration: 600,
         delay: anime.stagger(100),
-        translateX: [-baseDistance,0],
+        translateX: [-baseDistance, 0],
         easing: baseEasing
       });
-      domEach(".c-card-sm__block", function(key, item){
+      domEach(".c-card-sm__block", function (key, item) {
 
-        sr.reveal(item,{
+        sr.reveal(item, {
           scale: {
-            value: [0.9,1],
+            value: [0.9, 1],
             // easing: "linear"
           },
           opacity: 1,
           duration: 600,
-          delay: 100*key,
-          translateY: [-baseDistance,0],
+          delay: 100 * key,
+          translateY: [-baseDistance, 0],
           easing: baseEasing
-        } );
+        });
       });
     }
-
 
 
     // slick
     function slickSlider() {
 
-      if ($('.js-gallery-slider').length <0 ){
+      if ($('.js-gallery-slider').length < 0) {
         return false;
       }
 
@@ -272,6 +276,7 @@ class App {
     // ループスライダー
     function infiniteSlider() {
       const optionInfinite = {
+        margin: 30,
         infinite: true,
         arrows: false,
         swipe: false,
@@ -288,11 +293,290 @@ class App {
       if (slickInfinite) $(slickInfinite).slick(optionInfinite);
     }
 
+    function loopSlider() {
+      var targetInner = $('.js-loop-slider'),
+        slideEasing = 'linear',
+        slideSpeed = 4000;
+
+      $.each(targetInner, function () {
+        var self = $(this);
+        var targetInnerItems = self.children();
+        for (var i = 0; i < 2; i++) {
+          targetInnerItems.clone().prependTo(self);
+          targetInnerItems.clone().appendTo(self);
+        }
+        //liの個数を取得
+        var selfChildItemLength = self.children().length;
+        //liの幅を取得
+        var selfChildList = self.children().innerHeight();
+        //ulを複製する
+        // self.clone().appendTo( targetInner );
+        //ulの親divに幅を付与する
+        // targetInner.width( ( selfChildList * selfChildItemLength ) * 2 )
+        targetInner.height(selfChildList * selfChildItemLength);
+
+        // 親divをアニメーションさせる
+        function galleryAnimate() {
+          let start = 0,
+            end = 0;
+          $.each(targetInner, function (i, el) {
+            if ($(el).hasClass('is-reverse')) {
+              start = '-' + (selfChildList * selfChildItemLength) / 3 * 2 + 'px';
+              end = 0;
+            } else {
+              $(el).css({
+                top: '-' + (selfChildList * selfChildItemLength) / 3 * 2 + 'px'
+              });
+              start = 0;
+              end = '-' + (selfChildList * selfChildItemLength) / 3 * 2 + 'px';
+            }
+            $(el).animate(
+              {
+                top: start
+              }, {
+                duration: slideSpeed * selfChildItemLength,
+                easing: slideEasing,
+                complete: function () {
+                  $(el).css({
+                    top: end
+                  });
+                  galleryAnimate()
+                }
+              }
+            );
+          });
+        }
+
+        galleryAnimate()
+      });
+    }
+
+    function sliedbarButton() {
+      var button = $('.c-slidebar-menu a');
+
+      button.on('click', function () {
+        $('body').removeClass('is-slidebar-active');
+        slidebar.isActive = false;
+      });
+    }
+
+    function scrollAnim() {
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-main-visual",
+            start: "top 90%",
+          },
+        })
+        .from(".c-main-visual__content", {
+          opacity: 0,
+          y: 20,
+          delay: 0.6,
+        })
+        .from(".c-main-visual__images", {
+          opacity: 0,
+          delay: 0.2,
+        })
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-block-problem__item",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-block-problem__item",
+          {
+            opacity: 0,
+            y: 20,
+            delay: 0.2,
+            stagger: {
+              from: "start",
+              amount: 0.6
+            }
+          }
+        )
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-card-problem__item",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-card-problem__item",
+          {
+            opacity: 0,
+            y: 20,
+            delay: 0,
+            stagger: {
+              from: "start",
+              amount: 1.2
+            }
+          }
+        )
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-block-number-box__box",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-block-number-box__box",
+          {
+            opacity: 0,
+            y: 20,
+            delay: 0,
+            stagger: {
+              from: "start",
+              amount: 0.6
+            }
+          }
+        )
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-block-notice__box",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-block-notice__list li",
+          {
+            opacity: 0,
+            x: 10,
+            delay: 0,
+            stagger: {
+              from: "start",
+              amount: 0.4
+            }
+          }
+        )
+
+      gsap
+        .timeline({
+          defaults: {ease: "circ.out", duration: 0.6},
+          scrollTrigger: {
+            trigger: ".c-card-acceptance__cards",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        })
+        .from(".c-card-acceptance__item",
+          {
+            opacity: 0,
+            y: 20,
+            delay: 0,
+            stagger: {
+              from: "start",
+              amount: 0.6
+            }
+          }
+        )
+
+
+      gsap.from(".c-block-notice__heading", {
+        duration: 1,
+        ease: "elastic.out(1, 0.3)",
+        opacity: 0,
+        scale: 0.5,
+        scrollTrigger: {
+          trigger: ".c-block-notice__heading",
+          start: "top 90%",
+        }
+      });
+
+      const headings = document.getElementsByClassName('c-heading');
+
+      for (let i = 0; i < headings.length; i++) {
+        gsap.from(headings[i], {
+          duration: 1,
+          ease: "elastic.out(1, 0.3)",
+          opacity: 0,
+          scale: 0.7,
+          scrollTrigger: {
+            trigger: headings[i],
+            start: "top 90%",
+          }
+        });
+      }
+
+      const panelTitles = document.getElementsByClassName('c-block-panel__heading');
+
+      for (let i = 0; i < panelTitles.length; i++) {
+        gsap.from(panelTitles[i], {
+          duration: 1,
+          ease: "elastic.out(1, 0.3)",
+          opacity: 0,
+          scale: 0.7,
+          scrollTrigger: {
+            trigger: panelTitles[i],
+            start: "top 90%",
+          }
+        });
+      }
+
+      const boxBlocks = document.getElementsByClassName('c-box-block__block');
+
+      for (let i = 0; i < boxBlocks.length; i++) {
+        gsap.from(boxBlocks[i], {
+          opacity: 0,
+          y: 20,
+          scrollTrigger: {
+            trigger: boxBlocks[i],
+            start: "top 90%",
+          }
+        });
+      }
+
+      const blockNormals = document.getElementsByClassName('c-block-normal__block');
+
+      for (let i = 0; i < blockNormals.length; i++) {
+        gsap.from(blockNormals[i], {
+          opacity: 0,
+          y: 20,
+          scrollTrigger: {
+            trigger: blockNormals[i],
+            start: "top 90%",
+          }
+        });
+      }
+
+      const blockComments = document.getElementsByClassName('c-block-comment');
+
+      for (let i = 0; i < blockComments.length; i++) {
+        gsap.from(blockComments[i], {
+          opacity: 0,
+          y: 20,
+          scrollTrigger: {
+            trigger: blockComments[i],
+            start: "top 90%",
+          }
+        });
+      }
+
+    }
+
+
     $(function () {
       menuSlide();
       owlCarousel();
-      reveal();
       slickSlider();
+      infiniteSlider();
+      loopSlider();
+      sliedbarButton();
+      scrollAnim();
     });
   }
 }

@@ -1,0 +1,138 @@
+.c-block-comment {
+  margin-top: rem-calc(80);
+  @include breakpoint(medium down) {
+    margin-top: rem-calc(64);
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include breakpoint(medium down) {
+      display: block;
+    }
+  }
+
+  &__images {
+    width: rem-calc(288);
+    flex: none;
+    margin-right: rem-calc(24);
+    @include breakpoint(medium down) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: rem-calc(32);
+    }
+  }
+
+  &__image {
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      width: rem-calc(62);
+      height: rem-calc(58);
+      background-image: url(../images/img-comment-deco.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      position: absolute;
+      left: 20px;
+      top: -20px;
+    }
+
+    img {
+      width: rem-calc(185);
+    }
+
+    &-text {
+      margin-top: rem-calc(21);
+      text-align: center;
+      font-size: rem-calc(18);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 30/18*1;
+      @include breakpoint(medium down) {
+        font-size: rem-calc(16);
+        margin-top: rem-calc(16);
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: rem-calc(50) rem-calc(60) rem-calc(50) rem-calc(95);
+    background-color: $color-secondary;
+    border-radius: 20px;
+    position: relative;
+    @include breakpoint(medium down) {
+      padding: rem-calc(24) rem-calc(24);
+      border-radius: 10px;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 18px 10px 0;
+      border-color: transparent $color-secondary transparent transparent;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(-100%);
+      @include breakpoint(medium down) {
+        border-width: 0 10px 18px 10px;
+        border-color: transparent transparent $color-secondary transparent;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateY(-100%) translateX(-50%);
+      }
+    }
+  }
+
+  &__text {
+    font-size: rem-calc(18);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 32/18*1;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(14);
+    }
+
+    span {
+      color: $color-primary;
+    }
+  }
+
+  &__name {
+    margin-top: rem-calc(29);
+    padding-left: rem-calc(44);
+    font-size: rem-calc(17);
+    letter-spacing: 0;
+    line-height: 32/17*1;
+    position: relative;
+    @include breakpoint(medium down) {
+      font-size: rem-calc(14);
+      margin-top: rem-calc(16);
+      padding-left: rem-calc(24);
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: rem-calc(30);
+      height: 1px;
+      background-color: $font-base-color;
+      position: absolute;
+      left: 0;
+      top: 16px;
+      @include breakpoint(medium down) {
+        top: 14px;
+        width: rem-calc(16);
+      }
+    }
+  }
+}

@@ -4,86 +4,566 @@
 extends /inc/foundation/_base.pug
 block append config
   - current.id = "top" // ページのID
-  - current.title = "トップページ" // タイトルあ
-  - current.description = "これはトップページの説明文です" // 説明文
+  - current.title = "ロケなび！ロケ地・ロケ弁・撮影情報 無料検索サイト" // タイトルあ
+  - current.description = "ロケハンをカンタン・スピーディに！映像制作の方必見！これを使えば、WEBロケハンがより簡単スピーディ、リーズナブルにできます。presented by　ロケーションジャパン編集部" // 説明文
   - current.bodyClass = "top" // body に付与するクラス
   - current.depth = 1 // ページの階層
 
 block body
   +c_main-visual()
   main.l-main
-    section.l-section.is-lg.is-color-secondary
-      .l-container
-        h2.c-heading.is-xlg.is-bottom.js-modal-image(data-modaal-content-source="assets/images/img-sample.jpg")
-          span ABOUT
-          small 私たちについて
-        p.u-text-center テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        +c.card.u-mbs.is-top.is-lg
-          .row.slide
-            .large-4.small-12
-              +e.block
-                +e.image: +img("img-card-01.jpg")
-                +e.content
-                  h3.c-card__title コンセプトタイトル
-                  p.c-card__text ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-            .large-4.small-12
-              +e.block
-                +e.image: +img("img-card-01.jpg")
-                +e.content
-                  h3.c-card__title コンセプトタイトル
-                  p.c-card__text ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-            .large-4.small-12
-              +e.block
-                +e.image: +img("img-card-01.jpg")
-                +e.content
-                  h3.c-card__title コンセプトタイトル
-                  p.c-card__text ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-    section.l-section.is-lg.is-top
-      .l-container
-        h2.c-heading.is-xlg.is-bottom
-          span SERVICE
-          small 事業内容
-      +c.hero-block-square
-        +e.block
-          +e.image: +img("img-hero-block-01.jpg")
-          .l-container
-            +e.content
+    section.l-section#problem
+      +c.block-problem.u-hidden-md
+        +e.top
+          +e.container
+            +e.heading
+              h2.c-heading.is-lg
+                small PROBLEM
+                p こんな<span>お悩み</span>、ありませんか？
+            +e.cards
+              +e.item
+                +e.box
+                  +e.text.
+                    <span>低予算</span>でも、ロケはしたい！<br>
+                    最高の画を撮って<span>ヒットさせたい！</span>
+                +e.image: +img("img-problem-01.png","プロデューサー・監督")
+              +e.item
+                +e.box
+                  +e.text.
+                    <span>コロナで協力的なロケ地</span>が分からない！<br>
+                    ロケ先のトラブルも怖い！
+                +e.image: +img("img-problem-02.png","制作部")
+              +e.item
+                +e.box
+                  +e.text.
+                    ネットのネタは使えない！<br>
+                    でも<span>リサーチする予算もない！</span>
+                +e.image: +img("img-problem-03.png","AD")
+        +e.bottom
+          +e.container
+            +e.heading
+              h2.c-heading.is-xlg
+                small ここだけの話！
+                p
+                  +img("logo.png","ロケなび！")
+                  | なら…
+            +c.card-problem
+              +e.cards
+                +e.item
+                  +e.title
+                    | 作品づくりの
+                    br
+                    | <span>予算から</span>協力！
+                  +e.image: +img("img-problem-locanavi-01.png","プロデューサー・監督")
+                  +e.box(data-heightline-group="box")
+                    +e("ul").list
+                      li 値引き交渉や「あご・あし・まくら」の<br>相談OK
+                      li 地域のロケハンツアーに無料ご招待
+                      li 国内の映像作品の補助金情報をご紹介
+                    +e.button
+                      a(href="https://locanavi.com/area/", target="_blank").c-button.is-primary.is-exlink ロケなび！コンシェルジュへ
+                +e.item
+                  +e.title
+                    | ロケ対応は指導済！
+                    br
+                    | 万全な<span>協力体制</span>
+                  +e.image: +img("img-problem-locanavi-02.png","制作部")
+                  +e.box(data-heightline-group="box")
+                    +e("ul").list
+                      li 台本・企画内容をしっかり把握し、撮影に積極的な屋上・オフィスなど人気施設を無料で紹介
+                      li 協力体制の整っている、ロケ弁店、機材・求人・車両などの撮影サポートの検索も可能
+                      li トラブルなく安心して撮影できるロケ場所を紹介
+                    +e.button
+                      a(href="https://locanavi.com/", target="_blank").c-button.is-primary.is-exlink 急なロケもロケなび！へ
+                +e.item
+                  +e.title
+                    | ロケ地、地域ネタ、
+                    br
+                    | さらにリサーチまで<span>無料</span>！
+                  +e.image: +img("img-problem-locanavi-03.png","AD")
+                  +e.box(data-heightline-group="box")
+                    +e("ul").list
+                      li 地域のグルメや面白い人・<br>話題のスポットも無料で検索
+                      li 地元でしか知られていない珍しいネタの<br>提供料も無料
+                      li ロケ地、ロケ弁、機材・求人・車両、<br>打ち上げ会場なども無料で検索！
+                    +e.button
+                      a(href="https://locanavi.com/matters/", target="_blank").c-button.is-primary.is-exlink 情報バラエティネタが豊富！
+
+            div.u-mbs.is-top.is-xxlg
+              +c_block-btn
+
+      +c.block-problem-sm.u-visible-md
+        +e.container
+          +e.heading
+            h2.c-heading.is-lg
+              small PROBLEM
+              p こんな<span>お悩み</span>、ありませんか？
+        +e.blocks
+          +e.block
+            +e.scrollbox
               +e.inner
-                h3.c-heading.is-sm.is-bottom タイトルがここに入ります。
-                p テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                +e.button: +a("#").c-button.is-sm ボタンテキスト
-        +e.block
-          +e.image: +img("img-hero-block-01.jpg")
-          .l-container
-            +e.content
+                +e.trouble
+                  +e.box
+                    +e.text.
+                      <span>低予算</span>でも、ロケはしたい！<br>
+                      最高の画を撮って<br><span>ヒットさせたい！</span>
+                  +e.image: +img("img-problem-sm-01.png","プロデューサー・監督")
+                +e.arrow: +img("img-problem-sm-arrow.png","ここだけの話！ロケなび！なら…")
+                +e.result
+                  .c-card-problem
+                    .c-card-problem__item
+                      .c-card-problem__title
+                        p
+                          | 作品づくりの
+                          br
+                          | <span>予算から</span>協力！
+                      .c-card-problem__image: +img("img-problem-locanavi-01.png","プロデューサー・監督")
+                      .c-card-problem__box
+                        ul.c-card-problem__list
+                          li 値引き交渉や「あご・あし・まくら」の<br>相談OK
+                          li 地域のロケハンツアーに無料ご招待
+                          li 国内の映像作品の補助金情報をご紹介
+                        .c-card-problem__button
+                          a(href="https://locanavi.com/area/", target="_blank").c-button.is-primary.is-exlink ロケなび！コンシェルジュへ
+          +e.block
+            +e.scrollbox
               +e.inner
-                h3.c-heading.is-sm.is-bottom タイトルがここに入ります。
-                p テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                +e.button: +a("#").c-button.is-sm ボタンテキスト
-        +e.block
-          +e.image: +img("img-hero-block-01.jpg")
-          .l-container
-            +e.content
+                +e.trouble
+                  +e.box
+                    +e.text.
+                      <span>コロナで協力的なロケ地</span>が<br>
+                      分からない！<br>
+                      ロケ先のトラブルも怖い！
+                  +e.image: +img("img-problem-sm-02.png","制作部")
+                +e.arrow: +img("img-problem-sm-arrow.png","ここだけの話！ロケなび！なら…")
+                +e.result
+                  .c-card-problem
+                    .c-card-problem__item
+                      .c-card-problem__title
+                        p
+                          | ロケ対応は指導済！
+                          br
+                          | 万全な<span>協力体制</span>
+                      .c-card-problem__image: +img("img-problem-locanavi-02.png","制作部")
+                      .c-card-problem__box
+                        ul.c-card-problem__list
+                          li 台本・企画内容をしっかり把握し、撮影に積極的な屋上・オフィスなど人気施設を無料で紹介
+                          li 協力体制の整っている、ロケ弁店、機材・求人・車両などの撮影サポートの検索も可能
+                          li トラブルなく安心して撮影できるロケ場所を紹介
+                        .c-card-problem__button
+                          a(href="https://locanavi.com/", target="_blank").c-button.is-primary.is-exlink 急なロケもロケなび！へ
+          +e.block
+            +e.scrollbox
               +e.inner
-                h3.c-heading.is-sm.is-bottom タイトルがここに入ります。
-                p テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                +e.button: +a("#").c-button.is-sm ボタンテキスト
-    section.l-section.is-lg
-      .l-container
-        +c.news
-          .row
-            .large-3.small-12
-              +e.head
-                h2.c-news__title.c-heading.is-xlg
-                  span NEWS
-                  small お知らせ
-                +e.button: +a("/news/").c-button.is-sm 一覧を見る
-            .large-9.small-12
+                +e.trouble
+                  +e.box
+                    +e.text.
+                      ネットのネタは使えない！<br>
+                      でも<br>
+                      <span>リサーチする予算もない！</span>
+                  +e.image: +img("img-problem-sm-03.png","AD")
+                +e.arrow: +img("img-problem-sm-arrow.png","ここだけの話！ロケなび！なら…")
+                +e.result
+                  .c-card-problem
+                    .c-card-problem__item
+                      .c-card-problem__title
+                        p
+                          | ロケ地、地域ネタ、
+                          br
+                          | さらにリサーチまで<span>無料</span>！
+                      .c-card-problem__image: +img("img-problem-locanavi-03.png","AD")
+                      .c-card-problem__box
+                        ul.c-card-problem__list
+                          li 地域のグルメや面白い人・<br>話題のスポットも無料で検索
+                          li 地元でしか知られていない珍しいネタの<br>提供料も無料
+                          li ロケ地、ロケ弁、機材・求人・車両、<br>打ち上げ会場なども無料で検索！
+                        .c-card-problem__button
+                          a(href="https://locanavi.com/matters/", target="_blank").c-button.is-primary.is-exlink 情報バラエティネタが豊富！
+
+
+
+
+    section.l-section.is-xxxlg#about
+      +c.block-number-box
+        +e.container
+          +e.heading
+            h2.c-heading.is-xlg
+              small どうしてここまで？
+              p
+                +img("logo.png","ロケなび！")
+                | とは
+          +e.boxes
+            +e.box
+              +e.num 01
+              +e.title.
+                映像製作業界NO.1<br>
+                ロケ情報検索サイト！
+              +e.images
+                +e.image: +img("img-number-box-01-01.jpg","ロケじゃらん")
+                +e.image: +img("img-number-box-01-02.jpg","Location Japan")
+                +e.label: +img("img-number-box-01.png","Amazon旅雑誌ランキング1位")
+              +e.text.
+                始まりは、2002年映像業界向けに地域情報を紹介した【ロケじゃらん】。<br>
+                2003年には、国内唯一のロケ地専門誌【ロケーションジャパン】を創刊。<br>
+                その後、制作者の皆さんから「リアルタイムで情報を紹介して欲しい」と要望を受け、2007年に【ロケなび！】サイトをスタートしました。※ロケーションジャパンは現在も発行
+              +e.inbox
+                +e.inbox-title ■ロケなび！とLJの特徴
+                +e("ul").inbox-list
+                  li 掲載企業や地域は、宣伝・PRが目的なので、撮影に協力的！
+                  li 20年以上の歴史があるので、日本全国の地域情報・ネタが豊富！（Webに未掲載の情報も）
+            +e.box
+              +e.num 02
+              +e.title.
+                全施設にロケなび！スタッフが<br>
+                指導＆フォロー
+              +e.images
+                +e.image: +img("img-number-box-02-01.jpg","指導&フォローのイメージ")
+                +e.image: +img("img-number-box-02-02.jpg","ロケなび！撮影対応簡易マニュアル")
+                +e.label: +img("img-number-box-02.png","「ガイアの夜明け」で紹介されました！")
+              +e.text.
+                撮影の対応が未経験の施設・自治体でも、トラブルなく対応できるよう、全施設にロケなび！スタッフが付き、ロケ対応の基礎知識から受入れ・撮影時までのフローを「ロケ対応マニュアル」によって、指導しています。
+              +e.inbox
+                +e.inbox-title ■ロケなび！サービスの特徴
+                +e("ul").inbox-list
+                  li 「言った、言わない」を防ぐ、トラブル防止の撮影規約書
+                    br
+                    small （※ロケなび！対応マニュアル）
+                  li 俳優、タレントや未公開作品情報などの情報の取り扱いを指導
+                  li 消え物の用意、小道具の貸し出し、エキストラ協力、控室・宿泊の割引のサービス
+                +e.inbox-text など、製作者のニーズに沿ったロケ受け入れのノウハウを、定期的にレクチャーしています。
+              +e.sup ※1 - 本マニュアルは、観光庁「テーマ別観光による地方誘客事業／ロケツーリズム協議会」の“ロケツーリズムマニュアル”に情報提供しています。
+
+        div.u-mbs.is-top.is-xxlg
+          +c_block-btn
+
+
+    section.l-section.is-xxxlg.is-bottom.is-color-secondary#example
+      +c.page-header
+        +e.image: +bgimg("img-page-header-example.jpg").c-page-header__bgimg
+        +e.inner
+          +e.title
+            h2.c-heading.is-lg
+              small EXAMPLE
+              p 実際の具体例
+
+      +c.block-panel
+        +e.box
+          +e.heading
+            +img("img-example-title.svg","実際の具体例")
+            h3 こんなに、<span>お得！</span>
+            p 実際の使用例
+          +c.box-block
+            +e.blocks
+              +e.block
+                +e.image: +img("img-example-01-01.jpg","")
+                +e.content
+                  +e.title.
+                    企業版ふるさと納税2400万円、協力実績！<br>
+                    ～千葉県茂原市等4市町連携×<br>
+                    映画「今はちょっと、ついてないだけ」～
+                  +e("ul").list
+                    li 制作費として、自治体が企業版ふるさと納税で支援。
+                    li 「あご、あし、まくら」＋エキストラ、ロケ場所調整など、4市町が全面協力。
+                  +e.button
+                    a(href="https://locanavi.com/facility/mobara/", target="_blank").c-button.is-primary.is-exlink 詳しく見る
+              +e.block
+                +e.image: +img("img-example-01-02.jpg","")
+                +e.content
+                  +e.title.
+                    連続ドラマに町が全面協力！<br>
+                    ～愛知県幸田町×ドラマ『最高のオバハン』～
+                  +e("ul").list
+                    li ロケ場所・町民エキストラ協力ほか、ロケ弁・車両手配で300万円を補助。
+                    li 緊急事態宣言中もリモートで対応、解除後にはスピーディーな動き出しが可能に。
+                  +e.button
+                    a(href="https://locanavi.com/facility/koutacho/", target="_blank").c-button.is-primary.is-exlink 詳しく見る
+              +e.block
+                +e.image: +img("img-example-01-03.jpg","")
+                +e.content
+                  +e.title.
+                    交通費・宿泊費が無料！の<br>
+                    地方ロケハンツアー
+                  +e("ul").list
+                    li ロケなび！監修にて、静岡県西伊豆町、岐阜県飛騨市、長野県千曲市などで実施。
+                    li 各地域の市長・町長などのトップともネットワークが作れる大きなチャンス。
+                    li ご要望に沿ったロケ場所をご紹介。
+                  +e.button
+                    a(href="https://locanavi.com/area/", target="_blank").c-button.is-primary.is-exlink 詳しく見る
+          +c.block-comment
+            +e.block
+              +e.images
+                +e.image: +img("img-comment-01.png","製作者（プロデューサー・監督）")
+                +e.image-text 製作者（プロデューサー・監督）<br>のコメント
               +e.content
-                +loop(3)
-                  +a("/news/page/").c-news__block
-                    +e.date 2018.10.10
-                    +e.label.c-label.is-white カテゴリ
-                    +e.text お知らせの投稿タイトルがここに入ります。
-  // オファーブロック
-  +l_offer
+                +e.text.
+                  補助金や費用の対応はもちろん嬉しいのですが、<br class="u-hidden-sm">キャストのアレルギーや好みの食べ物などを<br class="u-hidden-sm"><span>リサーチ</span>したロケ弁を提供してくれるなど<span>サポート面</span>で助かりました！
+                +e.name 〇〇さん
+
+      +c.block-panel
+        +e.box
+          +e.heading
+            +img("img-example-title.svg","実際の具体例")
+            h3 こんなに、<span>安心！</span>
+            p 抜群の受け入れ体制
+
+          +c.card-acceptance
+            +e.cards
+              a(href="https://locanavi.com/facility/parco/?search_mode=1&genre=&detail=1&freew=freew&query=PARCO", target="_blank").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-01.jpg").is-bgimg
+                +e.content
+                  +e.title PARCO（パルコ）
+                  +e.text
+                    p ①パルコグループで要望に合う店舗を紹介　
+                    p ②館内全体の貸し切り実績あり
+              a(href="https://locanavi.com/facility/akasaka_intercity/?genre=&detail=0&freew=freew&search_mode=1&query=%E8%B5%A4%E5%9D%82", target="_blank").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-02.jpg").is-bgimg
+                +e.content
+                  +e.title 赤坂インターシティコンファレンス
+                  +e.text
+                    p ①24時間撮影可能
+                    p ②会議室が複数あり、警察や病院の会議室設定などにも応用できる
+              a(href="https://locanavi.com/facility/cerulean/?genre=&detail=0&freew=freew&search_mode=1&query=%E3%82%BB%E3%83%AB%E3%83%AA%E3%82%A2%E3%83%B3%E3%82%BF%E3%83%AF%E3%83%BC%E6%9D%B1%E6%80%A5%E3%83%9B%E3%83%86%E3%83%AB", target="_blank").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-03.jpg").is-bgimg
+                +e.content
+                  +e.title セルリアンタワー東急ホテル
+                  +e.text
+                    p ①フロア貸し切り可能
+                    p ②高級マンションや社長室としても撮影実績あり
+              a(href="https://locanavi.com/facility/hotel-spring/?genre=&detail=0&freew=freew&search_mode=1&query=%E3%83%9B%E3%83%86%E3%83%AB%E3%82%B9%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B9%E5%B9%95%E5%BC%B5", target="_blank").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-04.jpg").is-bgimg
+                +e.content
+                  +e.title ホテルスプリングス幕張
+                  +e.text
+                    p ①ホテル新館一棟丸々貸し切り可能
+                    p ②豪華客船としても撮影実績あり
+              a(href="https://locanavi.com/feature/pdp_restaurant/", target="_blank").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-05.jpg").is-bgimg
+                +e.content
+                  +e.title PDP（飲食店）
+                  +e.text
+                    p ①グループ紹介あり！<br>ご要望に合った施設で撮影できる
+                    p ②貸し切りの相談も可能
+              a(href="https://locanavi.com/facility/kameido1001/?genre=&detail=0&freew=freew&search_mode=1&query=%E4%BA%80%E6%88%B81001%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA", target="_blank").c-card-acceptance__item
+                +e.image: +bgimg("img-acceptance-06.jpg").is-bgimg
+                +e.content
+                  +e.title 亀戸1001マンションスタジオ
+                  +e.text
+                    p ①長時間割引などの調整可能！
+                    p ②家具や食器類など貸出サービス
+
+          +c.block-comment
+            +e.block
+              +e.images
+                +e.image: +img("img-comment-02.png","制作者（制作部）")
+                +e.image-text 制作者（制作部）の声
+              +e.content
+                +e.text.
+                  何より、窓口の人が<span>現場を理解</span>してくれているので、<br class="u-hidden-sm"><span>安心</span>して利用できます。<br>
+                  また、撮影に積極的な施設が多く、コロナ禍でもスムーズに撮影することができました。
+                +e.name 〇〇さん
+
+      +c.block-panel
+        +e.box
+          +e.heading
+            +img("img-example-title.svg","実際の具体例")
+            h3 ここまで、<span>無料！？</span>
+            p 旅・情報番組ネタのリサーチ
+
+          +c.block-normal
+            +e.blocks
+              +e.block
+                +e.image: +img("img-free-01.jpg","『有吉くんの正直さんぽ』（長崎県島原市）")
+                +e.content
+                  +e.title 『有吉くんの正直さんぽ』<br class="u-hidden-lg">（長崎県島原市）
+                  +e("ul").list.c-list.is-icon
+                    li 10スポット（飲食店、城、電車等）全て貸し切りでの撮影を可能に！
+                    li 市長含め、コロナ下でもロケ歓迎ムード！
+                    li 全ての段取りや調整を窓口が実施
+                    li 飲食店への事前の根回しを徹底
+                    li 撮影のお断り連絡もすべてサポート
+              +e.block
+                +e.image: +img("img-free-02.jpg","『世界の果てまでイッテQ』（大分県別府市／杉乃井ホテル）")
+                +e.content
+                  +e.title 『世界の果てまでイッテQ』<br>（大分県別府市／杉乃井ホテル）
+                  +e("ul").list.c-list.is-icon
+                    li コロナ下でも、積極的に場所貸しに対応！
+                    li グループホテルへの事前の根回しを徹底
+                    li 撮影料、宿泊費など、ディスカウント相談にも対応。
+
+          +c.block-comment
+            +e.block
+              +e.images
+                +e.image: +img("img-comment-03.png","制作者（AD）")
+                +e.image-text 制作者（AD）の声
+              +e.content
+                +e.text.
+                  コロナ禍でロケがしづらい中、ロケを受け入れてくれ感謝です。<br>
+                  市長があそこまで対応してくれるのは、正直さんぽ<span>史上最高だった！</span>
+                +e.name 〇〇さん
+
+
+    section.l-section.is-lg
+      +c.loop-slider
+        +e.slider.js-infinite-slider
+          +e.image: +bgimg("img-loop-slider-01.jpg").is-bgimg
+          +e.image: +bgimg("img-loop-slider-02.jpg").is-bgimg
+          +e.image: +bgimg("img-loop-slider-03.jpg").is-bgimg
+          +e.image: +bgimg("img-loop-slider-04.jpg").is-bgimg
+
+
+    section.l-section.is-xxxlg.is-color-primary.is-bg-image.is-margin-bottom#news
+      .l-container
+        +c.block-notice
+          +e.heading
+            small いよいよ2/15より！
+            h2 ロケなび！<br class="u-hidden-lg"><span>プレミアムサービス</span>開始予定！
+          +e.box
+            +e("ul").list
+              li 掲載施設の値引き情報
+              li 交通費・宿泊費無料のロケハンツアー
+              li 掲載施設の値引き情報
+          +e.texts
+            +e.text.
+              などを<span>優先的に</span>ご案内いたします！<br>
+              (3/15より会員登録スタート)
+            +e.text.
+              ※2/15より<span>サイトリニューアル！</span>更に情報が探しやすく<br class="u-hidden-lg">生まれ変わります！
+          +e.button
+            a(href="https://locanavi.com/magazine.php", target="_blank").c-button.is-xlg <i class="fa fa-envelope" aria-hidden="true"></i>メルマガで最新ニュースを受け取る
+
+
+    section.l-section.is-xxxlg.is-color-secondary#contact
+      .l-container
+        +c.block-contact
+          +e.heading
+            h2 ロケや撮影に関する<br class="u-hidden-lg">ご相談はこちら
+          +e.button
+            a(href="tel:03-5157-0567").c-block-contact__tel.c-button
+              p ロケなび！コンシェルジュ
+                small （(株)地域活性プランニング内）
+              strong <i class="fa fa-phone" aria-hidden="true"></i>03-5157-0567
+              span 受付時間 9:00〜18:30 (土日祝除く)
+          +e.text.c-lead.
+            お悩みごと、不安なこと、お気軽にお問い合わせください。<br>
+            専門スタッフがニーズに沿ったマッチングやサポートをさせていただきます。<br>
+            下記のフォームに必要項目を入力して送信してください。
+
+        +c("form").forms
+          +e.block
+            +e.title
+              | 会社名
+            +e.content
+              +e.input: input(type="text",name="会社名",placeholder="株式会社カンパニー")
+
+          +e.block
+            +e.title
+              | お名前
+              span.c-forms__label 必須
+            +e.content
+              +e.input: input(type="text",name="お名前",placeholder="山田　太郎")
+
+          +e.block
+            +e.title
+              | TEL
+              span.c-forms__label 必須
+            +e.content
+              +e.input: input(type="text",name="TEL",placeholder="123-456-789")
+
+          +e.block
+            +e.title
+              | メールアドレス
+              span.c-forms__label 必須
+            +e.content
+              +e.input: input(type="text",name="メールアドレス",placeholder="info@mail.com")
+
+          +e.block
+            +e.title
+              | ご連絡方法
+              span.c-forms__label 必須
+            +e.content
+              +e.radio
+                span
+                  label
+                    input(type="radio",name="ご連絡方法",value="電話")
+                    span 電話
+                span
+                  label
+                    input(type="radio",name="ご連絡方法",value="メール")
+                    span メール
+                span
+                  label
+                    input(type="radio",name="ご連絡方法",value="いずれでも可")
+                    span いずれでも可
+
+          +e.block
+            +e.title.is-vertical-top
+              | お問い合わせ種別<br>
+              | （複数選択可）
+              span.c-forms__label 必須
+            +e.content
+              +e.checkbox
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="撮影支援について")
+                    span 撮影支援について
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="ロケーションについて")
+                    span ロケーションについて
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="ロケ弁・打上会場について")
+                    span ロケ弁・打上会場について
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="撮影ネタ・タレントについて")
+                    span 撮影ネタ・タレントについて
+                span
+                  label
+                    input(type="checkbox",name="お問い合わせ種別",value="その他お問い合わせ")
+                    span その他お問い合わせ
+
+          +e.block
+            +e.title.is-vertical-top お問い合わせ内容
+              span.c-forms__label 必須
+            +e.content
+              +e.textarea
+                textarea(name="お問い合わせ内容",placeholder="")
+
+          +e.block
+            +e.title
+              | ファイルを添付する
+            +e.content
+              +e.input: input(type="file",name="添付ファイル")
+
+          +e.block
+            +e.title.is-vertical-top
+              | 最新ニュースを受け取る<br>
+              | （メルマガ）
+              span.c-forms__label 必須
+            +e.content
+              +e.radio
+                span
+                  label
+                    input(type="radio",name="メルマガ",value="登録する")
+                    span 登録する
+                span
+                  label
+                    input(type="radio",name="メルマガ",value="登録しない")
+                    span 登録しない
+
+          +e.privacy
+            label
+              input(type="checkbox",name="「個人情報保護の取り扱いに関するご確認」を確認する",value="確認しました")
+              a(href="https://www.chiikikassei.co.jp/privacy-policy/", target="_blank") 個人情報保護方針
+              | の内容に同意する
+
+          +e.submit
+            button.c-button.is-xlg 確認画面へ<i class="fa fa-angle-right" aria-hidden="true"></i>
+
+          +e.submit.is-two-columns
+            .row
+              .large-3.is-push-lg-3.small-6
+                button.c-button.is-lg.is-secondary.is-arrow-left <i class="fa fa-angle-left" aria-hidden="true"></i>戻る
+              .large-3.small-6
+                button.c-button.is-lg 送信する<i class="fa fa-angle-right" aria-hidden="true"></i>

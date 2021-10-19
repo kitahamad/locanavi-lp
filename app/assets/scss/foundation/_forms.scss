@@ -1,8 +1,8 @@
 $forms-transition: all ease-in-out .2s !default;
 
-$forms-input-font-size: 15px;
-$forms-input-border-color: #ccc;
-$forms-input-active-border-color: $color-primary;
+$forms-input-font-size: 16px;
+$forms-input-border-color: #707070;
+$forms-input-active-border-color: $color-accent;
 
 input[type="text"],
 input[type="url"],
@@ -11,8 +11,8 @@ input[type="email"],
 input[type="password"],
 input[type="tel"] {
   font-size: $forms-input-font-size;
-  line-height: 1.8;
-  border: 1px solid $border-base-color;
+  line-height: 24/16*1;
+  border: 1px solid $forms-input-border-color;
   padding: rem-calc(8) rem-calc(12);
   max-width: 100%;
   width: 100%;
@@ -35,14 +35,14 @@ input[type="tel"] {
 // Styleguide 1.6.2
 textarea {
   font-size: $forms-input-font-size;
-  line-height: 1.8;
+  line-height: 24/16*1;
   border: 1px solid $border-base-color;
   padding: rem-calc(8) rem-calc(12);
   max-width: 100%;
   width: 100%;
   transition: $forms-transition;
   background-color: $color-white;
-  min-height: 200px;
+  min-height: 167px;
   @include breakpoint(small only) {
     font-size: 16px;
   }

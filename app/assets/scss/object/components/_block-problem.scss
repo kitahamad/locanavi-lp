@@ -1,0 +1,89 @@
+.c-block-problem {
+
+  &__top {
+    padding-top: rem-calc(72);
+    padding-bottom: rem-calc(80);
+  }
+
+  &__bottom {
+    padding-top: rem-calc(156);
+    padding-bottom: rem-calc(90);
+    background-color: $color-secondary;
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 86px 152.5px 0 152.5px;
+      border-color: $color-white transparent transparent transparent;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__container {
+    max-width: rem-calc(1180);
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 1244px) {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+    @include breakpoint(small only) {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: rem-calc(60);
+  }
+
+  &__cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 100%;
+    max-width: rem-calc(360);
+    margin-right: rem-calc(36);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__box {
+    background-color: $color-secondary;
+    border-radius: 26px;
+    padding: rem-calc(40) rem-calc(12);
+    margin-bottom: rem-calc(10);
+  }
+
+  &__text {
+    text-align: center;
+    font-size: rem-calc(15);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 30/15*1;
+
+    span {
+      color: $color-primary;
+      font-size: rem-calc(20);
+      line-height: 30/20*1;
+    }
+  }
+
+  &__image {
+    text-align: center;
+    img {
+      width: 100%;
+      max-width: rem-calc(228);
+    }
+  }
+}

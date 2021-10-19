@@ -80,11 +80,26 @@
   // カラー設定
   //->プライマリー
   &.is-color-primary {
-    background-color: $color-primary;
+    background-color: rgba($color-primary, 0.2);
   }
   //->セカンダリー
   &.is-color-secondary {
     background-color: $color-secondary;
+  }
+
+  &.is-bg-image {
+    position: relative;
+    background-image: url(../images/bg-notice.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &.is-margin-bottom {
+    margin-bottom: rem-calc(60);
+    @include breakpoint(small only) {
+      margin-bottom: rem-calc(30);
+    }
   }
 
   // マージン設定

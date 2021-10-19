@@ -1,52 +1,29 @@
-/*
----
-name: ヘッダー
-category: Layout
----
-*/
 .l-header {
   background-color: $color-white;
   width: 100%;
   z-index: 9990;
-  padding: rem-calc(16) rem-calc(32) rem-calc(24);
-  position: relative;
+  padding: 0 rem-calc(40) 0 rem-calc(32);
+  box-shadow: 0 5px 8px rgba(0,0,0,0.16);
+  position: fixed;
+  top: 0;
+  left: 0;
+  @media (max-width: 1100px) {
+    padding: 0 rem-calc(24) 0 rem-calc(24);
+  }
   @include breakpoint(medium down) {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
     width: 100%;
-    padding: rem-calc(3) rem-calc(64) rem-calc(3) rem-calc(16);
-    height: rem-calc(55);
-  }
-
-  &__inner {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-    @include breakpoint(medium down) {
-      flex-wrap: wrap;
-    }
-  }
-
-  &__text {
-    font-size: rem-calc(12);
-    letter-spacing: 0.1em;
-    opacity: 0.7;
-    margin: 0;
-    font-weight: 400;
-    @include breakpoint(medium down) {
-      font-size: rem-calc(10);
-      letter-spacing: 0;
-      display: none;
-    }
+    padding: 0 rem-calc(90) 0 rem-calc(20);
   }
 
   &__heading {
     margin: 0;
-    width: rem-calc(175);
+    width: 220px;
     flex-shrink: 0;
+    position: relative;
+    top: -5px;
     @include breakpoint(medium down) {
-      width: rem-calc(148);
+      width: 122px;
+      top: 0;
     }
 
     a,
@@ -58,6 +35,10 @@ category: Layout
   &__content {
     display: flex;
     align-items: center;
+    height: rem-calc(94);
+    @include breakpoint(medium down) {
+      height: rem-calc(70);
+    }
   }
 
   &__nav {
@@ -72,7 +53,13 @@ category: Layout
       width: 100%;
 
       li {
-        margin-right: 32px;
+        margin-right: 60px;
+        @media (max-width: 1200px) {
+          margin-right: rem-calc(32);
+        }
+        @media (max-width: 1100px) {
+          margin-right: rem-calc(24);
+        }
         &:last-of-type {
           margin-right: 0;
         }
@@ -87,9 +74,11 @@ category: Layout
         a {
           text-decoration: none;
           color: $font-base-color;
-          font-size: rem-calc(14);
+          font-weight: 700;
+          font-size: rem-calc(15);
+          letter-spacing: 0.05em;
           position: relative;
-          padding-bottom: rem-calc(36);
+          padding-bottom: rem-calc(37);
           transition: all .3s ease;
           //装飾
           &:after {
@@ -121,92 +110,16 @@ category: Layout
     }
   }
 
-  &__submenu {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateY(100%);
-    width: 100%;
-    z-index: 9999;
-    background-color: rgba(#F4F7F9,0.95);
-    padding-top: rem-calc(64);
-    padding-bottom: rem-calc(40);
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s;
-    @media (max-width: 1280px) {
-      padding-left: rem-calc(24);
-      padding-right: rem-calc(24);
-    }
-    &__outer {
-      display: flex;
-      width: 100%;
-      max-width: rem-calc(1140);
-      margin: 0 auto;
-    }
-    &__title {
-      width: rem-calc(390);
-      padding-top: rem-calc(8);
-      span {
-        @include webfont-bold();
-        font-size: rem-calc(56);
-        letter-spacing: 0.05em;
-        display: block;
-      }
-      small {
-        font-weight: 700;
-        font-size: rem-calc(18);
-        letter-spacing: 0.05em;
-        display: block;
-      }
-    }
-    &__content {
-      width: calc(100% - 390px);
-    }
-    &__block {
-      width: 230/750*100%;
-      padding-bottom: 0 !important;
-      margin-right: 30/750*100%;
-      margin-bottom: rem-calc(24);
-      opacity: 1!important;
-      &:after {
-        display: none!important;
-      }
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-      span {
-        font-size: rem-calc(15);
-        font-weight: 700;
-        margin-top: rem-calc(10);
-        display: block;
-      }
-      &:hover {
-        color: $color-primary;
-      }
-    }
-    &__flex {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-
   &__button {
-    //*矢印削除
-    max-width: rem-calc(196) !important;
-    margin-left: rem-calc(24);
+    margin-left: rem-calc(50);
+    @media (max-width: 1100px) {
+      margin-left: rem-calc(24);
+      &.c-button {
+        max-width: rem-calc(180);
+      }
+    }
     @include breakpoint(medium down) {
       display: none;
-    }
-
-    &:after {
-      display: none;
-    }
-
-    //*アイコン
-    i {
-      font-size: rem-calc(16);
-      padding-right: rem-calc(8);
     }
   }
 }

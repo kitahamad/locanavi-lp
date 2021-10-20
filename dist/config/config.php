@@ -7,13 +7,13 @@
 $config['to_email'] = 'webmaster@grow-group.jp';
 
 // 管理者宛_メール件名
-$config['to_subject'] = '［株式会社地域活性プランニング］お問い合わせが届きました';
+$config['to_subject'] = '［ロケなび！ポータルサイト］お問い合わせが届きました';
 
 // 自動返信を有効に
 $config['auto_reply'] = true;
 
 // 自動返信メール_件名
-$config['auto_reply_subject'] = '［株式会社地域活性プランニング］お問い合わせありがとうございます';
+$config['auto_reply_subject'] = '［ロケなび！ポータルサイト］お問い合わせありがとうございます';
 
 // 自動返信メール_送信者名
 $config['auto_reply_name'] = '株式会社地域活性プランニング';

@@ -1,51 +1,53 @@
 <!-- 確認画面 -->
-<section class="l-section is-xxxlg is-color-secondary is-top-margin" id="contact">
-  <div class="l-container">
-    <p class="c-lead u-mbs is-bottom is-lg">下記ご入力内容をご確認後、問題がないようであれば送信ボタンをクリックしてください。</p>
-    <div class="c-forms is-confirm">
-      <div class="row">
-        <div class="large-8 is-push-lg-2 small-12">
-          <!-- input.htmlから送られてきたデータを自動的に展開する -->
-          {loop:$params}
-          <div class="c-forms__block">
-            <div class="c-forms__title">
-              <span>{$params[].key}&nbsp;</span>
-            </div>
-            <div class="c-forms__content">
-              <span>{$params[].value.nl2br}&nbsp;</span>
-            </div>
-          </div>
-          {/loop:$params}
-          <!-- ここまで -->
-        </div>
-      </div>
-      <div class="c-forms__submit  is-two-columns">
+<main class="l-main">
+  <section class="l-section is-xxxlg is-color-secondary is-top-margin" id="contact">
+    <div class="l-container">
+      <p class="c-lead u-mbs is-bottom is-lg">下記ご入力内容をご確認後、問題がないようであれば送信ボタンをクリックしてください。</p>
+      <div class="c-forms is-confirm">
         <div class="row">
-          <div class="large-3 is-push-lg-3 small-12">
-            <form method="post" action="/#form" class="inline">
-              {$hiddens}
-              <input type="hidden" name="page" value="input">
-              <button type="submit" class="c-button is-lg is-secondary is-arrow-left">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>戻る
-              </button>
-            </form>
+          <div class="large-8 is-push-lg-2 small-12">
+            <!-- input.htmlから送られてきたデータを自動的に展開する -->
+            {loop:$params}
+            <div class="c-forms__block">
+              <div class="c-forms__title">
+                <span>{$params[].key}&nbsp;</span>
+              </div>
+              <div class="c-forms__content">
+                <span>{$params[].value.nl2br}&nbsp;</span>
+              </div>
+            </div>
+            {/loop:$params}
+            <!-- ここまで -->
           </div>
-          <div class="large-3 small-12">
-            <form method="post" action="/" class="inline">
-              {$hiddens}
-              <input type="hidden" name="page" value="finish">
-              <button type="submit" class="c-button is-lg">送信する<i class="fa fa-angle-right" aria-hidden="true"></i>
-              </button>
-            </form>
+        </div>
+        <div class="c-forms__submit  is-two-columns">
+          <div class="row">
+            <div class="large-3 is-push-lg-3 small-12">
+              <form method="post" action="/#form" class="inline">
+                {$hiddens}
+                <input type="hidden" name="page" value="input">
+                <button type="submit" class="c-button is-lg is-secondary is-arrow-left">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>戻る
+                </button>
+              </form>
+            </div>
+            <div class="large-3 small-12">
+              <form method="post" action="/" class="inline">
+                {$hiddens}
+                <input type="hidden" name="page" value="finish">
+                <button type="submit" class="c-button is-lg">送信する<i class="fa fa-angle-right" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<style>
-  .l-header__nav,
-  .l-header__button {
-    display: none;
-  }
-</style>
+  </section>
+  <style>
+    .l-header__nav,
+    .l-header__button {
+      display: none;
+    }
+  </style>
+</main>

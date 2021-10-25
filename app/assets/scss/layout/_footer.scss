@@ -80,6 +80,14 @@
         &:last-child {
           margin-right: 0;
         }
+
+        a {
+          @include transition;
+          &:hover {
+            opacity: 1;
+            color: $color-primary;
+          }
+        }
       }
     }
   }

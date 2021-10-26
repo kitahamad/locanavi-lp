@@ -21,13 +21,13 @@ $config['auto_reply_name'] = '株式会社地域活性プランニング';
 // 自動返信メール_ユーザー入力メールアドレスの input name 値
 $config['auto_reply_email'] = 'メールアドレス';
 
+//$config['checkmode'] = 2;
+//$config['display_error'] = true;
+
 $config['file'] = true;
 $config['file_allow_extension'] = "jpg,jpeg,gif,png,pdf,xlsx,docx,doc,xls";
 $config['file_max_size'] = 10120000;
 $config['file_retention_period'] = 1800;
-
-//$config['checkmode'] = 2;
-//$config['display_error'] = true;
 
 // ## SMTP設定 ##
 // $config['smtp'] = true;

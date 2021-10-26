@@ -8,13 +8,13 @@
       padding-left: 32px;
     }
     @include breakpoint(small only) {
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: 27px;
+      padding-left: 27px;
     }
   }
 
   &__heading {
-    margin-bottom: rem-calc(108);
+    margin-bottom: rem-calc(118);
     @include breakpoint(small only) {
       margin-bottom: rem-calc(56);
     }

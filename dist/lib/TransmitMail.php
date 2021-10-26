@@ -787,7 +787,9 @@ class TransmitMail
                                     '_' . $value['name'];
                                 $file_path = $this->config['tmp_dir'] . $tmp_name;
 
+
                                 if (move_uploaded_file($value['tmp_name'], $file_path)) {
+                                    chmod("777",$file_path);
                                     $this->tpl->set("$key.tmp_name", $this->h($tmp_name));
                                     $this->tpl->set("$key.name", $this->h($value['name']));
                                     $this->files[$key] = array(
@@ -1152,9 +1154,9 @@ class TransmitMail
             }
 
             if (isset($attach)) {
-              foreach($attach as $a) {
-                $this->mail->addAttachment($a["PATH"],$a["NAME"]);
-              }
+            	foreach($attach as $a) {
+                    $this->mail->addAttachment($a["PATH"],$a["NAME"]);
+	            }
             }
         }
 

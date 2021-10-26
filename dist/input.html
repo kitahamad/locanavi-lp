@@ -731,7 +731,7 @@
             などを<span>優先的に</span>ご案内いたします！<br>
             (3/15より会員登録スタート)
           </div>
-          <div class="c-block-notice__text">※2/15より<span>サイトリニューアル！</span>更に情報が探しやすく<br class="u-hidden-lg">生まれ変わります！
+          <div class="c-block-notice__text">※2/15より<span>サイトリニューアル！</span><br class="u-hidden-lg">更に情報が探しやすく<br class="u-hidden-lg">生まれ変わります！
           </div>
         </div>
         <div class="c-block-notice__button">
@@ -835,11 +835,11 @@
           </div>
           <div class="c-forms__content">
             <div class="c-forms__checkbox">
-              <span><label><input class="required" name="お問い合わせ種別" type="checkbox" value="撮影支援について" {$checked.お問い合わせ種別.撮影支援について} /><span>撮影支援について</span></label></span>
-              <span><label><input class="required" name="お問い合わせ種別" type="checkbox" value="ロケーションについて" {$checked.お問い合わせ種別.ロケーションについて} /><span>ロケーションについて</span></label></span>
-              <span><label><input class="required" name="お問い合わせ種別" type="checkbox" value="ロケ弁・打上会場について" {$checked.お問い合わせ種別.ロケ弁・打上会場について} /><span>ロケ弁・打上会場について</span></label></span>
-              <span><label><input class="required" name="お問い合わせ種別" type="checkbox" value="撮影ネタ・タレントについて" {$checked.お問い合わせ種別.撮影ネタ・タレントについて} /><span>撮影ネタ・タレントについて</span></label></span>
-              <span><label><input class="required" name="お問い合わせ種別" type="checkbox" value="その他お問い合わせ" {$checked.お問い合わせ種別.その他お問い合わせ} /><span>その他お問い合わせ</span></label></span>
+              <span><label><input class="required" name="お問い合わせ種別[]" type="checkbox" value="撮影支援について" {$checked.お問い合わせ種別.撮影支援について} /><span>撮影支援について</span></label></span>
+              <span><label><input class="required" name="お問い合わせ種別[]" type="checkbox" value="ロケーションについて" {$checked.お問い合わせ種別.ロケーションについて} /><span>ロケーションについて</span></label></span>
+              <span><label><input class="required" name="お問い合わせ種別[]" type="checkbox" value="ロケ弁・打上会場について" {$checked.お問い合わせ種別.ロケ弁・打上会場について} /><span>ロケ弁・打上会場について</span></label></span>
+              <span><label><input class="required" name="お問い合わせ種別[]" type="checkbox" value="撮影ネタ・タレントについて" {$checked.お問い合わせ種別.撮影ネタ・タレントについて} /><span>撮影ネタ・タレントについて</span></label></span>
+              <span><label><input class="required" name="お問い合わせ種別[]" type="checkbox" value="その他お問い合わせ" {$checked.お問い合わせ種別.その他お問い合わせ} /><span>その他お問い合わせ</span></label></span>
               <input type="hidden" name="required[]" value="お問い合わせ種別">
               {if:$required.お問い合わせ種別}
               <div class="c-error"><em>{$required.お問い合わせ種別}</em></div>

@@ -47,7 +47,7 @@ category: Base
 .c-list.is-icon {
   li {
     position: relative;
-    padding-left: rem-calc(20);
+    padding-left: rem-calc(22);
     @include breakpoint(small only) {
       padding-left: rem-calc(18);
     }
@@ -58,7 +58,7 @@ category: Base
       font-family: "FontAwesome";
       color: $color-primary;
       position: absolute;
-      top: rem-calc(4);
+      top: rem-calc(5);
       left: 0;
       @include breakpoint(small only) {
         top: rem-calc(4);

@@ -1,0 +1,563 @@
+# Webalizer V2.23-08 Incremental Data - 10/26/2021 00:48:02
+2021 10 26 0 48 2
+13898 12779 68 77 15 29 1000290819 638 81 0 0 0
+1 1 3381 13 26
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+58 49 11200673 20 37 11 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+290 288 22466149 2 6 2 0 0
+1052 776 69429272 9 34 14 0 0
+4336 3860 310061607 6 151 9 0 0
+139 120 10541086 2 5 2 0 0
+1209 1148 87157231 11 68 13 0 0
+7 4 253611 7 7 7 0 0
+5 2 90567 2 4 2 0 0
+6801 6532 489085530 15 325 21 0 0
+1 0 5093 1 1 1 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+105 70 6955595 12 0 0
+3227 3076 247950806 110 0 0
+548 516 43102651 59 0 0
+457 209 17103673 13 0 0
+80 61 6534827 8 0 0
+827 759 64962134 16 0 0
+389 287 26013577 5 0 0
+538 527 41116421 16 0 0
+522 491 38139418 37 0 0
+2786 2572 185892886 211 0 0
+3611 3463 268352769 101 0 0
+530 530 34479293 25 0 0
+0 0 0 0 0 0
+2 1 639387 2 0 0
+0 0 0 0 0 0
+2 2 123232 2 0 0
+1 0 5745 1 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+4 1 60403 4 0 0
+3 1 74506 3 0 0
+1 1 64320 1 0 0
+0 0 0 0 0 0
+265 212 18719176 12 0 0
+0
+0
+0
+12779
+0
+0
+0
+0
+0
+22
+0
+0
+24
+0
+458
+0
+0
+0
+0
+0
+3
+596
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+16
+0
+0
+0
+0
+0
+# -urls- 
+/assets/images/img-problem-01.png
+1 175 0 5468253 0 0 0 0
+/.well-known/acme-challenge/Q2xBqxX8I_EO_XS5Q-lE6XHF1Qp_3b8p5__-cpvZbGE
+0 4 0 1408 0 0 0 0
+/assets/images/img-problem-03.png
+1 174 0 3232931 0 0 0 0
+/assets/images/img-acceptance-01.jpg
+1 171 0 11764052 0 0 0 0
+/assets/images/img-text-deco-right.svg
+0 173 0 238123 0 0 0 0
+/assets/images/web-clipicon.png
+1 4 0 14432 0 0 0 0
+/assets/images/img-main-visual-04.jpg
+1 172 0 17067251 0 0 0 0
+/assets/images/img-problem-locanavi-01.png
+1 175 0 3159010 0 0 0 0
+/assets/images/img-main-visual-02.jpg
+1 177 0 43753022 0 0 0 0
+/assets/images/img-acceptance-04.jpg
+1 169 0 15287810 0 0 0 0
+/assets/images/img-problem-sm-03.png
+1 174 0 2583047 0 0 0 0
+/assets/images/img-page-header-example.jpg
+1 172 0 36646593 0 0 0 0
+/assets/images/img-loop-slider-03.jpg
+1 170 0 15431549 0 0 0 0
+/assets/images/img-acceptance-06.jpg
+1 174 0 40687927 0 0 0 0
+/assets/css/style.css.map
+0 252 0 11923666 0 0 0 0
+/assets/images/icon-exclamation.png
+1 168 0 315626 0 0 0 0
+/assets/images/img-number-box-01-02.jpg
+1 175 0 27393776 0 0 0 0
+/assets/js/scripts.js
+0 234 0 300451 0 0 0 0
+/assets/images/icon-line.svg
+0 251 0 437366 0 0 0 0
+/assets/js/app.js
+0 268 0 66281647 0 0 0 0
+/.well-known/acme-challenge/nUdlnZ6tIqMnJk1iZLjXxTy-tTvF3Q-8Savl3_wpSc4
+0 4 0 1404 0 0 0 0
+/assets/css/app.css.map
+0 251 0 3334237 0 0 0 0
+/assets/fonts/fontawesome-webfont.ttf
+0 1 0 141602 0 0 0 0
+/assets/images/bg-notice.png
+1 171 0 46440334 0 0 0 0
+/assets/images/icon-twitter.svg
+0 251 0 252401 0 0 0 0
+/assets/images/img-acceptance-05.jpg
+1 169 0 13158866 0 0 0 0
+/assets/fonts/fontawesome-webfont.eot
+0 5 0 499638 0 0 0 0
+/assets/images/img-problem-locanavi-02.png
+1 174 0 1758721 0 0 0 0
+/assets/images/img-main-visual-06.jpg
+1 176 0 31215314 0 0 0 0
+/assets/fonts/fontawesome-webfont.woff2
+0 294 0 21843714 0 0 0 0
+/confirm
+0 3 0 4622 0 0 0 0
+/assets/images/img-acceptance-02.jpg
+1 169 0 11708759 0 0 0 0
+/assets/images/img-number-box-02-02.jpg
+1 173 0 6332549 0 0 0 0
+/assets/plugin_images/ajax-loader.gif
+1 173 0 723097 0 0 0 0
+/assets/images/img-problem-sm-arrow.png
+1 174 0 2062182 0 0 0 0
+/assets/images/img-number-box-02.png
+1 173 0 1655829 0 0 0 0
+/assets/images/icon-good.svg
+0 168 0 276270 0 0 0 0
+/assets/images/img-number-box-01-01.jpg
+1 176 0 35651010 0 0 0 0
+/assets/images/img-free-02.jpg
+1 171 0 37684931 0 0 0 0
+/assets/images/logo-main-visual.png
+1 178 0 5326067 0 0 0 0
+/assets/images/img-problem-locanavi-03.png
+1 174 0 1684153 0 0 0 0
+/assets/images/img-loop-slider-01.jpg
+1 172 0 17792395 0 0 0 0
+/assets/js/app.js.map
+0 205 0 51660569 0 0 0 0
+/assets/images/img-problem-sm-01.png
+1 174 0 3628192 0 0 0 0
+/.well-known/acme-challenge/06cRnPdyhHjnHeyhmrd7SxhfSUlupfweiAaJBaJVDqU
+0 4 0 1406 0 0 0 0
+/assets/images/img-loop-slider-02.jpg
+1 174 0 34966669 0 0 0 0
+/assets/images/img-main-visual-01.jpg
+1 176 0 50784294 0 0 0 0
+/assets/images/img-problem-sm-02.png
+1 174 0 2468207 0 0 0 0
+/assets/images/img-loop-slider-04.jpg
+1 170 0 21050855 0 0 0 0
+/assets/images/img-number-box-02-01.jpg
+1 174 0 17908406 0 0 0 0
+/assets/images/img-acceptance-03.jpg
+1 169 0 9308985 0 0 0 0
+/assets/css/app.css
+0 314 0 4342726 0 0 0 0
+/
+0 575 0 17237881 81 22 0 0
+/assets/images/logo.png
+1 294 0 6486614 0 0 0 0
+/assets/images/img-comment-03.png
+1 170 0 3176940 0 0 0 0
+/assets/images/icon-instagram.svg
+0 251 0 542429 0 0 0 0
+/assets/images/img-example-01-01.jpg
+1 174 0 36982362 0 0 0 0
+/.well-known/acme-challenge/Z8S25vdwGucl9xNRCR2TFJgiaCL-mGICwy7-wjV1yDs
+0 4 0 1404 0 0 0 0
+/.well-known/acme-challenge/n9c9G0iRqsD7NrD8XVwXkf82ddCvuEZAm_AB7Vl8GiA
+0 4 0 1408 0 0 0 0
+/assets/images/img-example-01-02.jpg
+1 174 0 37260229 0 0 0 0
+/assets/images/img-example-01-03.jpg
+1 174 0 31152672 0 0 0 0
+/assets/images/icon-check.svg
+0 168 0 113416 0 0 0 0
+/assets/images/img-problem-02.png
+1 174 0 3418348 0 0 0 0
+/assets/images/icon-facebook.svg
+0 251 0 410525 0 0 0 0
+/assets/images/favicon.ico
+0 241 0 902868 0 0 0 0
+/assets/images/img-example-title.svg
+0 173 0 1506198 0 0 0 0
+/assets/images/img-text-deco-left.svg
+0 173 0 207348 0 0 0 0
+/assets/fonts/fontawesome-webfont.woff
+0 1 3543827351277023539 76136 0 0 0 0
+/assets/images/img-comment-deco.svg
+0 168 0 156681 0 0 0 0
+/assets/images/img-heading-xlg-deco.png
+1 168 0 167312 0 0 0 0
+/assets/images/img-main-visual-05.jpg
+1 177 0 25858242 0 0 0 0
+/assets/images/img-number-box-01.png
+1 173 0 1537013 0 0 0 0
+/assets/images/img-free-01.jpg
+1 172 0 30802622 0 0 0 0
+/assets/images/img-comment-01.png
+1 173 0 4451611 0 0 0 0
+/assets/images/img-main-visual-03.jpg
+1 177 0 47934828 0 0 0 0
+/assets/css/style.css
+0 312 0 8353887 0 0 0 0
+/assets/images/img-comment-02.png
+1 172 0 3447197 0 0 0 0
+# End Of Table - urls
+# -sites- (monthly)
+18.116.86.117
+0 2 2 704 0 0 0 0
+-
+3.19.56.43
+0 1 1 351 0 0 0 0
+-
+92.118.160.1
+0 2 1 64033 2 1635122175 0 0
+/
+150.129.2.114
+0 65 64 5327993 1 1634709778 0 0
+/
+34.252.236.238
+0 4 1 31627 1 1635070178 0 0
+/
+92.118.160.5
+0 1 0 409 1 1635030545 0 0
+/
+103.234.68.41
+0 66 65 5250180 1 1634699040 0 0
+/
+44.234.191.241
+0 2 1 11740 1 1635128801 0 0
+/
+220.151.95.154
+0 3925 3751 277899592 3 1635158251 0 0
+/
+167.248.133.60
+0 4 4 924455 1 1634092301 0 0
+/
+92.118.160.57
+0 1 1 64320 1 1635002265 0 0
+/
+1.33.220.114
+0 5017 4535 368890072 10 1634710099 0 0
+/
+92.118.160.41
+0 3 2 123669 3 1635134602 0 0
+/
+51.15.251.143
+0 1 0 5745 1 1634921724 0 0
+/
+34.96.130.15
+0 1 1 61935 1 1634689859 0 0
+/
+160.237.117.145
+0 204 199 16352189 1 1635141567 0 0
+/
+167.248.133.59
+0 4 4 924455 1 1634092302 0 0
+/
+34.77.162.17
+0 1 1 64320 1 1634960710 0 0
+/
+34.86.35.20
+0 1 0 5093 1 1634908296 0 0
+/
+52.39.4.59
+0 1 1 353 0 0 0 0
+-
+205.169.39.41
+0 1 1 634331 1 1634122517 0 0
+/
+34.86.35.29
+0 1 1 57173 1 1634869716 0 0
+/
+49.98.219.69
+0 66 64 5251184 1 1634866380 0 0
+/
+66.133.109.36
+0 5 5 1757 0 0 0 0
+-
+34.86.35.28
+0 1 0 409 1 1634584586 0 0
+/
+162.142.125.195
+0 4 2 195712 1 1634092301 0 0
+/
+3.120.130.29
+0 3 3 1053 0 0 0 0
+-
+167.94.138.59
+0 4 4 885298 1 1634092301 0 0
+/
+34.77.162.19
+0 1 1 54492 1 1634606488 0 0
+/
+34.96.130.9
+0 1 1 54492 1 1634672157 0 0
+/
+34.77.162.4
+0 1 1 58940 1 1634898267 0 0
+/
+66.249.82.129
+0 98 96 8403177 1 1635153036 0 0
+/
+34.96.130.20
+0 1 0 409 1 1634606503 0 0
+/
+34.86.35.0
+0 1 0 409 1 1634961213 0 0
+/
+34.96.130.13
+0 1 0 5093 1 1635209282 0 0
+/
+34.77.162.0
+0 1 1 58912 1 1635206319 0 0
+/
+34.86.35.22
+0 1 1 59292 1 1634615227 0 0
+/
+34.86.35.23
+0 1 1 59292 1 1634615732 0 0
+/
+54.155.60.11
+0 4 1 660976 1 1634099784 0 0
+/
+66.249.82.133
+0 83 81 7953066 1 1635153024 0 0
+/
+49.98.218.207
+0 66 64 5251184 1 1634803362 0 0
+/
+18.192.36.99
+0 2 2 702 0 0 0 0
+-
+34.86.35.6
+0 1 1 64320 1 1634900613 0 0
+/
+34.219.87.132
+0 3 3 1055 0 0 0 0
+-
+183.177.55.169
+0 66 65 5250182 1 1634709872 0 0
+/
+179.43.169.181
+0 2 2 224836 1 1634092349 0 0
+/
+34.77.162.3
+0 1 0 5093 1 1634673525 0 0
+/
+175.177.40.129
+0 197 193 15754214 3 1635141240 0 0
+/
+92.118.160.37
+0 2 1 69413 2 1634938979 0 0
+/
+54.221.27.173
+0 1 1 634294 1 1634131092 0 0
+/
+34.96.130.7
+0 1 0 5093 1 1634676182 0 0
+/
+3.142.122.14
+0 2 2 702 0 0 0 0
+-
+66.249.82.159
+0 85 83 6231581 1 1635153036 0 0
+/
+195.146.37.241
+0 6 6 3868644 1 1634093055 0 0
+/
+34.96.130.25
+0 1 1 58912 1 1635202820 0 0
+/
+113.40.182.113
+0 134 121 5554377 1 1635153257 0 0
+/
+115.38.181.202
+0 1531 1471 116782809 1 1635157886 0 0
+/
+162.142.125.193
+0 4 2 256528 1 1634092302 0 0
+/
+43.231.234.138
+0 387 141 11670180 1 1634699245 0 0
+/
+130.245.169.39
+0 4 2 1984114 1 1634092348 0 0
+/
+92.118.160.45
+0 1 1 58912 1 1635175280 0 0
+/
+34.221.255.206
+0 1 1 353 0 0 0 0
+-
+54.225.109.156
+0 1 1 58940 1 1635060922 0 0
+/
+51.158.118.231
+0 1 1 64804 1 1634966320 0 0
+/
+34.96.130.30
+0 1 0 5093 1 1634869659 0 0
+/
+34.96.130.17
+0 1 0 409 1 1634962548 0 0
+/
+34.96.130.3
+0 1 1 62553 1 1634889777 0 0
+/
+128.53.166.31
+0 1810 1737 125972820 6 1635162114 0 0
+/
+# End Of Table - sites (monthly)
+# -sites- (daily)
+34.96.130.13
+0 1 0 5093 1 1635209282 0 0
+/
+# End Of Table - sites (daily)
+# -referrers- 
+https://growgroup.ovice.in/
+0 2
+https://locanavi-lp.grgr.blue/confirm/
+0 1
+https://developers.google.com/
+0 47
+www.ecosia.org
+0 1
+yahoo.com
+0 1
+- (Direct Request)
+0 1061
+www.ask.com
+0 2
+https://app.pageproofer.com/
+0 6
+https://locanavi-lp.grgr.blue/assets/css/app.css
+0 450
+https://locanavi-lp.grgr.blue/
+0 11061
+www.google.com
+0 1
+https://locanavi-lp.grgr.blue/bower_components/jquery/dist/jquery.js
+0 1
+duckduckgo.com
+0 1
+www.baidu.com
+0 2
+https://locanavi-lp.grgr.blue/assets/css/style.css
+0 1261
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+0 451
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+0 1
+Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Mobile/15E14
+0 406
+Mozilla/5.0 (Linux; Android 7.0; Moto G (4)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Mobile Safari/537.36 C
+0 134
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko; compatible; BW/1.1; bit.ly/2W6Px8S) Chrome/8
+0 2
+Mozilla/5.0 (compatible; Let's Encrypt validation server; +https://www.letsencrypt.org)
+0 20
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.71 Safari/537.36
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15
+0 66
+Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Mobile Safa
+0 693
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+0 1669
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:92.0) Gecko/20100101 Firefox/92.0
+0 134
+Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)
+0 10
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36
+0 728
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+0 8404
+Python-urllib/3.6
+0 4
+Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0
+0 2
+Mozilla/5.0 (compatible; Integrity/8; +https://peacockmedia.software/mac/integrity/
+0 32
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+0 164
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E14
+0 322
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+0 129
+Mozilla/5.0 (X11; Linux x86_64; rv:83.0) Gecko/20100101 Firefox/83.0
+0 8
+Mozilla/5.0 (Linux; U; Android 4.4.2; en-us; SCH-I535 Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile
+0 6
+Integrity/8.3.40 CFNetwork/978.1 Darwin/18.7.0 (x86_64)
+0 1
+Expanse indexes the network perimeters of our customers. If you have any questions or concerns, please reach out to: scaninfo
+0 21
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36
+0 202
+Mozilla/5.0 (Linux; Android 11; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Mobile Safari/537.36
+0 132
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4590.2 Safari/537.36 Chrom
+0 132
+NetSystemsResearch studies the availability of various services across the internet. Our website is netsystemsresearch.com
+0 10
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36
+0 1
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

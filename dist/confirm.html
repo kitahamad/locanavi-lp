@@ -17,6 +17,16 @@
               </div>
             </div>
             {/loop:$params}
+            {loop:$files}
+            <div class="c-forms__block">
+              <div class="c-forms__title">
+                <span>{$files[].key}&nbsp;</span>
+              </div>
+              <div class="c-forms__content">
+                <span>{$files[].name}&nbsp;</span>
+              </div>
+            </div>
+            {/loop:$files}
             <!-- ここまで -->
           </div>
         </div>

@@ -82,10 +82,11 @@
         }
 
         a {
+          display: inline-block;
           @include transition;
           &:hover {
             opacity: 1;
-            color: $color-primary;
+            transform: scale(0.9);
           }
         }
       }

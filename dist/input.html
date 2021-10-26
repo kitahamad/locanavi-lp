@@ -865,8 +865,11 @@
           </div>
           <div class="c-forms__content">
             <div class="c-forms__input">
-              <input type="file" name="添付ファイル">
+              <input type="file" name="添付ファイル" value="{$添付ファイル}">
             </div>
+            {loop:$file.添付ファイル}
+            <div class="error"><em>{$file.添付ファイル}</em></div>
+            {/loop:$file.添付ファイル}
           </div>
         </div>
         <div class="c-forms__block">
@@ -893,7 +896,7 @@
           </label>
         </div>
         <div class="c-forms__submit">
-          <button class="c-button is-xlg">確認画面へ<i class="fa fa-angle-right" aria-hidden="true"></i></button>
+          <button type="submit" class="c-button is-xlg">確認画面へ<i class="fa fa-angle-right" aria-hidden="true"></i></button>
         </div>
       </form>
     </div>

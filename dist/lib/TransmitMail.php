@@ -1152,7 +1152,9 @@ class TransmitMail
             }
 
             if (isset($attach)) {
-                $this->mail->addAttachment($attach["PATH"],$attach["NAME"]);
+              foreach($attach as $a) {
+                $this->mail->addAttachment($a["PATH"],$a["NAME"]);
+              }
             }
         }
 

@@ -55,6 +55,7 @@
     margin-bottom: 2px;
     @include breakpoint(medium down) {
       font-size: rem-calc(28);
+      padding-left: 10px;
     }
   }
 
@@ -111,7 +112,7 @@
       height: rem-calc(78);
       margin-right: rem-calc(3);
       font-size: rem-calc(10);
-      padding-left: 0;
+      padding-left: 3px;
     }
     @include breakpoint(small only) {
       p {
@@ -134,7 +135,7 @@
     @include breakpoint(medium down) {
       margin-top: rem-calc(24);
       text-align: left;
-      margin-left: 10px;
+      margin-left: 14px;
       .c-block-btn {
         text-align: left;
         padding: 0;

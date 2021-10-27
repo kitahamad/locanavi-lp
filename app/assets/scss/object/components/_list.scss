@@ -61,7 +61,10 @@ category: Base
       top: rem-calc(5);
       left: 0;
       @include breakpoint(small only) {
+        font-size: 10px;
         top: rem-calc(4);
+        transform-origin: left center;
+        transform: scale(0.9);
       }
     }
 

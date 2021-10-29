@@ -75,6 +75,10 @@
         height: rem-calc(32);
       }
     }
+
+    span {
+      color: $font-base-color;
+    }
   }
 
   &__list {

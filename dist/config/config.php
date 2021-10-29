@@ -4,7 +4,7 @@
  */
 
 // 管理者宛_メールアドレス
-$config['to_email'] = 'd.kitahama@grow-group.jp';
+$config['to_email'] = 'location@chiikikassei.co.jp';
 
 // 管理者宛_メール件名
 $config['to_subject'] = '［ロケなび！ポータルサイト］お問い合わせが届きました';

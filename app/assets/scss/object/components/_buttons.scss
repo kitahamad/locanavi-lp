@@ -77,6 +77,17 @@
     }
   }
 
+  &.is-anchor {
+    &:after {
+      content: "\f107";
+      font-family: "FontAwesome";
+      font-size: rem-calc(17);
+      letter-spacing: 0;
+      line-height: 1;
+      margin-left: rem-calc(8);
+    }
+  }
+
 }
 
 

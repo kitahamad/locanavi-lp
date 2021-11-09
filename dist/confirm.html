@@ -36,7 +36,7 @@
       <div class="c-forms__submit  is-two-columns">
         <div class="row">
           <div class="large-3 is-push-lg-3 small-12">
-            <form method="post" action="/#form" class="inline">
+            <form method="post" action="./#form" class="inline">
               {$hiddens}
               <input type="hidden" name="page" value="input">
               <button type="submit" class="c-button is-lg is-secondary is-arrow-left">
@@ -45,10 +45,10 @@
             </form>
           </div>
           <div class="large-3 small-12">
-            <form method="post" action="/" class="inline">
+            <form method="post" action="./" class="inline">
               {$hiddens}
               <input type="hidden" name="page" value="finish">
-              <button type="submit" class="c-button is-lg">送信する<i class="fa fa-angle-right" aria-hidden="true"></i>
+              <button type="submit" class="c-button is-lg" id="complete">送信する<i class="fa fa-angle-right" aria-hidden="true"></i>
               </button>
             </form>
           </div>
